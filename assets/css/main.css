@@ -274,13 +274,11 @@ html.menu-open .navbar.scrolled {
     transition: var(--transition-normal);
 }
 
-.nav-link:hover,
-.nav-link.active {
+.nav-link:hover {
     color: var(--white);
 }
 
-.nav-link:hover::after,
-.nav-link.active::after {
+.nav-link:hover::after {
     width: 100%;
 }
 
