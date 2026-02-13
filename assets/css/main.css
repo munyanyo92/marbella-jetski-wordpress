@@ -148,7 +148,7 @@ ul, ol {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 99999;
     padding: 20px 0;
     background: #0a1628;
     border-bottom: none;
@@ -2905,6 +2905,18 @@ section {
         opacity: 1;
         visibility: visible;
         pointer-events: auto;
+    }
+
+    /* Hide cookie banner & WhatsApp when menu is open */
+    html.menu-open .cookie-banner,
+    html.menu-open .whatsapp-float {
+        display: none !important;
+    }
+
+    /* Prevent body scroll when mobile menu is open */
+    html.menu-open,
+    html.menu-open body {
+        overflow: hidden;
     }
 
     /* Nav links – centered, clean list with stagger entrance */
