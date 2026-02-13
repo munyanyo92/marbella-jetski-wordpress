@@ -2966,10 +2966,14 @@ section {
     .nav-menu.active .nav-link:nth-child(10) { transition-delay: 0.32s; }
 
     .nav-link:hover,
-    .nav-link:active,
-    .nav-link.active {
+    .nav-link:active {
         color: #fff !important;
         background: rgba(0, 180, 216, 0.15);
+    }
+
+    .nav-link.active {
+        color: #fff !important;
+        background: none;
     }
 
     .nav-link::after {
