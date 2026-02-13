@@ -86,6 +86,15 @@
                                 <span class="capacity"><i class="fas fa-user"></i> 1-2</span>
                                 <span class="price">€{{mjsk_jetski_excursion_60min}}</span>
                             </label>
+                            <label class="activity-option" data-cat="jetski">
+                                <input type="radio" name="activity" value="jetski-excursion-120" data-price="{{mjsk_jetski_excursion_120min}}" data-name="Jet Ski Excursion" data-duration="2 hours" data-type="tour">
+                                <div>
+                                    <div class="name">Jet Ski Excursion <span style="color:var(--secondary);font-size:0.75rem;font-weight:700;">EXTENDED</span></div>
+                                    <div class="duration">2 hours — Extended coastal adventure</div>
+                                </div>
+                                <span class="capacity"><i class="fas fa-user"></i> 1-2</span>
+                                <span class="price">€{{mjsk_jetski_excursion_120min}}</span>
+                            </label>
 
                             <!-- Water Sports -->
                             <label class="activity-option" data-cat="watersports">
@@ -169,6 +178,15 @@
                                 <span class="capacity"><i class="fas fa-users"></i> Up to 5</span>
                                 <span class="price">€{{mjsk_pedal_price}}</span>
                             </label>
+                            <label class="activity-option" data-cat="watersports">
+                                <input type="radio" name="activity" value="kayak" data-price="{{mjsk_kayak_price}}" data-name="Double Kayak" data-duration="1 hour">
+                                <div>
+                                    <div class="name">Double Kayak</div>
+                                    <div class="duration">1 hour · Tandem kayak for 2 people</div>
+                                </div>
+                                <span class="capacity"><i class="fas fa-users"></i> 2</span>
+                                <span class="price">€{{mjsk_kayak_price}}</span>
+                            </label>
 
                             <!-- Yacht Charters — Per Yacht Accordion -->
                             <div class="yacht-accordion" data-cat="yacht">
@@ -191,22 +209,22 @@
                                     <label class="activity-option">
                                         <input type="radio" name="activity" value="azimut-3h" data-price="{{mjsk_azimut_3h}}" data-name="Azimut 39 Fly" data-duration="3 hours">
                                         <div><div class="name">3 Hours</div></div>
-                                        <span class="price">€{{mjsk_azimut_2h}}</span>
+                                        <span class="price">€{{mjsk_azimut_3h}}</span>
                                     </label>
                                     <label class="activity-option">
                                         <input type="radio" name="activity" value="azimut-4h" data-price="{{mjsk_azimut_4h}}" data-name="Azimut 39 Fly" data-duration="4 hours">
                                         <div><div class="name">4 Hours <span style="color:var(--secondary);font-size:0.75rem;font-weight:700;">BEST VALUE</span></div></div>
-                                        <span class="price">€{{mjsk_azimut_3h}}</span>
+                                        <span class="price">€{{mjsk_azimut_4h}}</span>
                                     </label>
                                     <label class="activity-option">
                                         <input type="radio" name="activity" value="azimut-6h" data-price="{{mjsk_azimut_6h}}" data-name="Azimut 39 Fly" data-duration="6 hours">
                                         <div><div class="name">6 Hours</div></div>
-                                        <span class="price">€{{mjsk_azimut_4h}}</span>
+                                        <span class="price">€{{mjsk_azimut_6h}}</span>
                                     </label>
                                     <label class="activity-option">
                                         <input type="radio" name="activity" value="azimut-8h" data-price="{{mjsk_azimut_8h}}" data-name="Azimut 39 Fly" data-duration="Full day (8h)">
                                         <div><div class="name">Full Day (8h)</div></div>
-                                        <span class="price">€{{mjsk_azimut_6h}}</span>
+                                        <span class="price">€{{mjsk_azimut_8h}}</span>
                                     </label>
                                 </div>
                             </div>
@@ -231,22 +249,22 @@
                                     <label class="activity-option">
                                         <input type="radio" name="activity" value="cranchi-3h" data-price="{{mjsk_cranchi_3h}}" data-name="Cranchi 39" data-duration="3 hours">
                                         <div><div class="name">3 Hours</div></div>
-                                        <span class="price">€{{mjsk_cranchi_2h}}</span>
+                                        <span class="price">€{{mjsk_cranchi_3h}}</span>
                                     </label>
                                     <label class="activity-option">
                                         <input type="radio" name="activity" value="cranchi-4h" data-price="{{mjsk_cranchi_4h}}" data-name="Cranchi 39" data-duration="4 hours">
                                         <div><div class="name">4 Hours <span style="color:var(--secondary);font-size:0.75rem;font-weight:700;">BEST VALUE</span></div></div>
-                                        <span class="price">€{{mjsk_cranchi_3h}}</span>
+                                        <span class="price">€{{mjsk_cranchi_4h}}</span>
                                     </label>
                                     <label class="activity-option">
                                         <input type="radio" name="activity" value="cranchi-6h" data-price="{{mjsk_cranchi_6h}}" data-name="Cranchi 39" data-duration="6 hours">
                                         <div><div class="name">6 Hours</div></div>
-                                        <span class="price">€{{mjsk_cranchi_4h}}</span>
+                                        <span class="price">€{{mjsk_cranchi_6h}}</span>
                                     </label>
                                     <label class="activity-option">
                                         <input type="radio" name="activity" value="cranchi-8h" data-price="{{mjsk_cranchi_8h}}" data-name="Cranchi 39" data-duration="Full day (8h)">
                                         <div><div class="name">Full Day (8h)</div></div>
-                                        <span class="price">€{{mjsk_cranchi_6h}}</span>
+                                        <span class="price">€{{mjsk_cranchi_8h}}</span>
                                     </label>
                                 </div>
                             </div>
@@ -271,22 +289,22 @@
                                     <label class="activity-option">
                                         <input type="radio" name="activity" value="rinker-3h" data-price="{{mjsk_rinker_3h}}" data-name="Rinker 296 Captiva" data-duration="3 hours">
                                         <div><div class="name">3 Hours</div></div>
-                                        <span class="price">€{{mjsk_rinker_2h}}</span>
+                                        <span class="price">€{{mjsk_rinker_3h}}</span>
                                     </label>
                                     <label class="activity-option">
                                         <input type="radio" name="activity" value="rinker-4h" data-price="{{mjsk_rinker_4h}}" data-name="Rinker 296 Captiva" data-duration="4 hours">
                                         <div><div class="name">4 Hours <span style="color:var(--secondary);font-size:0.75rem;font-weight:700;">BEST VALUE</span></div></div>
-                                        <span class="price">€{{mjsk_rinker_3h}}</span>
+                                        <span class="price">€{{mjsk_rinker_4h}}</span>
                                     </label>
                                     <label class="activity-option">
                                         <input type="radio" name="activity" value="rinker-6h" data-price="{{mjsk_rinker_6h}}" data-name="Rinker 296 Captiva" data-duration="6 hours">
                                         <div><div class="name">6 Hours</div></div>
-                                        <span class="price">€{{mjsk_rinker_4h}}</span>
+                                        <span class="price">€{{mjsk_rinker_6h}}</span>
                                     </label>
                                     <label class="activity-option">
                                         <input type="radio" name="activity" value="rinker-8h" data-price="{{mjsk_rinker_8h}}" data-name="Rinker 296 Captiva" data-duration="Full day (8h)">
                                         <div><div class="name">Full Day (8h)</div></div>
-                                        <span class="price">€{{mjsk_rinker_6h}}</span>
+                                        <span class="price">€{{mjsk_rinker_8h}}</span>
                                     </label>
                                 </div>
                             </div>
@@ -311,22 +329,22 @@
                                     <label class="activity-option">
                                         <input type="radio" name="activity" value="catamaran-3h" data-price="{{mjsk_catamaran_3h}}" data-name="Catamaran Bali 4.0" data-duration="3 hours">
                                         <div><div class="name">3 Hours</div></div>
-                                        <span class="price">€{{mjsk_catamaran_2h}}</span>
+                                        <span class="price">€{{mjsk_catamaran_3h}}</span>
                                     </label>
                                     <label class="activity-option">
                                         <input type="radio" name="activity" value="catamaran-4h" data-price="{{mjsk_catamaran_4h}}" data-name="Catamaran Bali 4.0" data-duration="4 hours">
                                         <div><div class="name">4 Hours <span style="color:var(--secondary);font-size:0.75rem;font-weight:700;">BEST VALUE</span></div></div>
-                                        <span class="price">€{{mjsk_catamaran_3h}}</span>
+                                        <span class="price">€{{mjsk_catamaran_4h}}</span>
                                     </label>
                                     <label class="activity-option">
                                         <input type="radio" name="activity" value="catamaran-6h" data-price="{{mjsk_catamaran_6h}}" data-name="Catamaran Bali 4.0" data-duration="6 hours">
                                         <div><div class="name">6 Hours</div></div>
-                                        <span class="price">€{{mjsk_catamaran_4h}}</span>
+                                        <span class="price">€{{mjsk_catamaran_6h}}</span>
                                     </label>
                                     <label class="activity-option">
                                         <input type="radio" name="activity" value="catamaran-8h" data-price="{{mjsk_catamaran_8h}}" data-name="Catamaran Bali 4.0" data-duration="Full day (8h)">
                                         <div><div class="name">Full Day (8h)</div></div>
-                                        <span class="price">€{{mjsk_catamaran_6h}}</span>
+                                        <span class="price">€{{mjsk_catamaran_8h}}</span>
                                     </label>
                                 </div>
                             </div>
@@ -1091,4 +1109,3 @@
         setTimeout(() => { window.open('https://api.whatsapp.com/send?phone={{mjsk_whatsapp}}&text=' + encodeURIComponent(msg), '_blank'); }, 1500);
     }
     </script>
-</body>
