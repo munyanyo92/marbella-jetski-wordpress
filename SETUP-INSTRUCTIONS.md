@@ -4,13 +4,17 @@
 
 A complete WordPress theme that replicates the existing static website exactly. The design, animations, booking form, and all functionality are preserved. The WP admin lets you manage:
 
+- **All prices (85+ fields)** — Appearance → Customize → Pricing (All Services)
+- **Contact details** — Appearance → Customize → Site Settings → Contact Details
+- **Social links** — Appearance → Customize → Site Settings → Social Media Links
+- **Promo banner** — Appearance → Customize → Site Settings → Promo Banner
+- **Hero text & branding** — Appearance → Customize → Site Settings → Hero & Branding
 - **Navigation menus** — Appearance → Menus
-- **Contact details** — Appearance → Customize → Contact Details
-- **Social links** — Appearance → Customize → Social Media Links
-- **Promo banner** — Appearance → Customize → Promo Banner (toggle on/off, change text)
 - **Footer menus** — Appearance → Menus (Quick Links + Information)
-- **Page content** — Edit HTML files in `page-content/` folder (or hire someone)
+- **Widget areas** — Appearance → Widgets (Above Footer, Footer Widgets)
 - **Multi-language** — Install Polylang plugin, then duplicate each page per language
+
+> **No code editing required for price changes.** Every price on the site updates automatically from the Customizer.
 
 ---
 
@@ -104,12 +108,32 @@ Create these pages in **WP Admin → Pages → Add New**:
 ### Step 7: Configure Contact & Social
 
 1. Go to **Appearance → Customize**
-2. **Contact Details** — Update phone, email, WhatsApp, address, hours
-3. **Social Media Links** — Update Facebook, Instagram, TikTok, YouTube, TripAdvisor URLs
-4. **Promo Banner** — Toggle on/off, change the promotional text
-5. Click **Publish**
+2. Open **"Site Settings"** panel:
+   - **Contact Details** — Phone, email, WhatsApp, address, hours
+   - **Social Media Links** — Facebook, Instagram, TikTok, YouTube, TripAdvisor URLs
+   - **Promo Banner** — Toggle on/off, change the promotional title/text
+   - **Hero & Branding** — Hero title, subtitle, season text, stats (established year, rating, etc.)
+   - **Service Card Text** — "From" prices and descriptions on the homepage service cards
+3. Click **Publish**
 
-### Step 8: Set Up Permalinks
+### Step 8: Update Prices
+
+1. Go to **Appearance → Customize**
+2. Open **"Pricing (All Services)"** panel — this has sub-sections for:
+   - **Jet Ski Circuit Prices** — 20min, 30min, 1hr, 2hr
+   - **Jet Ski Excursion Prices** — 1hr, 2hr
+   - **Water Sport Prices** — Wakeboarding, skiing, banana, sofa, bull, SUP, pedal, kayak, etc.
+   - **Yacht: Rinker 296** — 2hr, 3hr, 4hr, 6hr, 8hr
+   - **Yacht: Cranchi 39** — 2hr, 3hr, 4hr, 6hr, 8hr
+   - **Yacht: Azimut 39 Fly** — 2hr, 3hr, 4hr, 6hr, 8hr
+   - **Yacht: Catamaran Bali 4.0** — 2hr, 3hr, 4hr, 6hr, 8hr
+   - **Racing Lesson Prices** — Basic, Experience, Masterclass
+   - **Other Pricing** — Photo service, lost key charge, deposit rates
+3. Change any price and click **Publish** — the change applies immediately across ALL pages (homepage, booking form, etc.)
+
+> **Important:** Prices are numbers only (no € sign). Example: enter `90` not `€90`. The € symbol is added automatically in the HTML.
+
+### Step 9: Set Up Permalinks
 
 1. Go to **Settings → Permalinks**
 2. Select **"Post name"** (e.g. `yoursite.com/booking/`)
@@ -142,14 +166,17 @@ Once Polylang is active, the theme's language switcher in the header automatical
 
 ### Easy Updates (No Code Needed)
 These are all done through the WP Admin dashboard:
-- **Phone, email, WhatsApp** → Appearance → Customize → Contact Details
-- **Social media links** → Appearance → Customize → Social Media Links
-- **Promo banner text** → Appearance → Customize → Promo Banner
+- **All prices** → Appearance → Customize → Pricing (All Services)
+- **Phone, email, WhatsApp** → Appearance → Customize → Site Settings → Contact Details
+- **Social media links** → Appearance → Customize → Site Settings → Social Media Links
+- **Promo banner text** → Appearance → Customize → Site Settings → Promo Banner
+- **Hero section text** → Appearance → Customize → Site Settings → Hero & Branding
 - **Navigation links** → Appearance → Menus
 - **Footer links** → Appearance → Menus (assign to footer locations)
+- **Widget areas** → Appearance → Widgets (Above Footer area, Footer Widgets)
 
 ### Content Updates (Edit HTML Files)
-To change page content (prices, descriptions, images):
+To change page layout/structure, images, or text that isn't managed by the Customizer:
 
 1. Connect to your server via FTP or File Manager
 2. Navigate to `wp-content/themes/marbellajetski/page-content/`
@@ -160,7 +187,7 @@ To change page content (prices, descriptions, images):
    - `about-us.html` — About Us page
    - `terms.html` — Legal pages
    - `weather-policy.html` — Weather policy
-4. The HTML has the same structure as the original static site
+4. Prices use `{{mjsk_xxx}}` placeholder tokens — do NOT replace these with hardcoded values
 5. Save and refresh the page
 
 ### Image Updates
@@ -214,13 +241,14 @@ marbellajetski/
 2. Each page template calls `mjsk_load_page_content('filename.html')`
 3. The helper function loads the HTML from `page-content/` and **automatically rewrites** all local asset paths (`assets/...`) to WordPress theme URIs
 4. Internal page links (`booking.html`) are rewritten to WordPress slugs (`/booking/`)
-5. The navigation uses `wp_nav_menu()` so it's fully editable in WP Admin
+5. All `{{mjsk_xxx}}` placeholder tokens are replaced with values from the Customizer (prices, contact info, etc.)
+6. The navigation uses `wp_nav_menu()` so it's fully editable in WP Admin
 
 ---
 
 ## Booking Form
 
-The booking form uses a custom JavaScript solution that generates a WhatsApp message with the booking details. **It does NOT use WordPress form plugins** — it works exactly as the static site version. The WhatsApp number is hardcoded in the booking form JavaScript; to change it, edit the `page-content/booking.html` file.
+The booking form uses a custom JavaScript solution that generates a WhatsApp message with the booking details. **It does NOT use WordPress form plugins** — it works exactly as the static site version. The WhatsApp number comes from the Customizer (Contact Details → WhatsApp). All prices in the booking form are managed through the Customizer — deposit rates, activity prices, and yacht prices all update automatically.
 
 To switch to a proper WordPress booking system later, replace the form in `page-content/booking.html` with a shortcode from a plugin like:
 - **Amelia** (free booking plugin)
@@ -232,7 +260,7 @@ To switch to a proper WordPress booking system later, replace the form in `page-
 ## FAQ
 
 **Q: Can I change prices on the website?**
-A: Yes. Edit the HTML files in `page-content/`. Search for the price amount (e.g., `€70`) and change it.
+A: Yes! Go to **Appearance → Customize → Pricing (All Services)**. Change any price and click Publish — it updates across ALL pages automatically. No code editing needed.
 
 **Q: Can I add new pages?**
 A: Yes! Create a new page in WP Admin → Pages → Add New. For pages with custom design, create an HTML file in `page-content/` and a matching template in `page-templates/`.
@@ -241,7 +269,7 @@ A: Yes! Create a new page in WP Admin → Pages → Add New. For pages with cust
 A: Videos are in `assets/media/videos/` and `assets/media/racing/`. They're referenced in the HTML. Upload new ones to the same folder and update the HTML.
 
 **Q: How do I update/rebuild the theme from the static site?**
-A: Run `bash wordpress-theme/build-theme.sh` again. It will regenerate all content files and the ZIP.
+A: Run `bash wordpress-theme/build-theme.sh` again. It will regenerate the ZIP. By default it preserves existing page-content files (with Customizer placeholders). Use `--force` to re-extract from the static HTML.
 
 **Q: Can I use this with page builders like Elementor?**
 A: The theme doesn't require page builders, but you can install Elementor and create new pages with it. The existing pages use their own templates.

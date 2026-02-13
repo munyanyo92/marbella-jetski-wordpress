@@ -54,7 +54,7 @@
                     <i class="fas fa-calendar-alt"></i>
                     <span>Book Your Adventure</span>
                 </a>
-                <a href="https://api.whatsapp.com/send?phone=34655442232&text=Hi!%20I%27d%20like%20to%20book%20a%20water%20sports%20experience!" class="btn btn-whatsapp btn-glow" target="_blank" rel="noopener noreferrer">
+                <a href="https://api.whatsapp.com/send?phone={{mjsk_whatsapp}}&text=Hi!%20I%27d%20like%20to%20book%20a%20water%20sports%20experience!" class="btn btn-whatsapp btn-glow" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-whatsapp"></i>
                     <span>WhatsApp Us</span>
                 </a>
@@ -120,8 +120,8 @@
                         <p>Experience the thrill on our latest Yamaha jet skis. Circuit rides or coastal excursions available.</p>
                         <div class="service-price">
                             <span class="from">From</span>
-                            <span class="price">€70</span>
-                            <span class="duration">/ 20 min</span>
+                            <span class="price">{{mjsk_card_jetski_from}}</span>
+                            <span class="duration">/ {{mjsk_card_jetski_unit}}</span>
                         </div>
                         <a href="#jetski" class="service-link link-underline">
                             <span>Explore Options</span>
@@ -143,8 +143,8 @@
                         <p>Cruise the coast in style. Captain, fuel, drinks and paddleboard included.</p>
                         <div class="service-price">
                             <span class="from">From</span>
-                            <span class="price">€250</span>
-                            <span class="duration">/ hour</span>
+                            <span class="price">{{mjsk_card_yacht_from}}</span>
+                            <span class="duration">/ {{mjsk_card_yacht_unit}}</span>
                         </div>
                         <a href="#boats" class="service-link link-underline">
                             <span>View Fleet</span>
@@ -166,8 +166,8 @@
                         <p>Wakeboarding, banana boats, crazy sofa, donuts & more for all ages!</p>
                         <div class="service-price">
                             <span class="from">From</span>
-                            <span class="price">€20</span>
-                            <span class="duration">/ person</span>
+                            <span class="price">{{mjsk_card_watersports_from}}</span>
+                            <span class="duration">/ {{mjsk_card_watersports_unit}}</span>
                         </div>
                         <a href="#watersports" class="service-link link-underline">
                             <span>See Activities</span>
@@ -189,8 +189,8 @@
                         <p>Explore Puerto Banús, Fuengirola and hidden coves with our expert guides.</p>
                         <div class="service-price">
                             <span class="from">From</span>
-                            <span class="price">€170</span>
-                            <span class="duration">/ hour</span>
+                            <span class="price">{{mjsk_card_excursions_from}}</span>
+                            <span class="duration">/ {{mjsk_card_excursions_unit}}</span>
                         </div>
                         <a href="#jetski" class="service-link link-underline">
                             <span>Book Tour</span>
@@ -212,8 +212,8 @@
                         <p>Train with a professional racer. Circuit sessions, technique coaching & pure adrenaline.</p>
                         <div class="service-price">
                             <span class="from">From</span>
-                            <span class="price">€299</span>
-                            <span class="duration">/ session</span>
+                            <span class="price">{{mjsk_card_racing_from}}</span>
+                            <span class="duration">/ {{mjsk_card_racing_unit}}</span>
                         </div>
                         <a href="#racing-lessons" class="service-link link-underline">
                             <span>Explore Racing</span>
@@ -321,16 +321,16 @@
                         <div class="pricing-table" data-booking-type="circuit">
                             <div class="price-row" data-activity="jetski-circuit-20" onclick="selectDuration(this)">
                                 <span class="duration"><i class="fas fa-clock"></i> 20 minutes</span>
-                                <span class="price">€70</span>
+                                <span class="price">€{{mjsk_jetski_circuit_20min}}</span>
                             </div>
                             <div class="price-row popular" data-activity="jetski-circuit-30" onclick="selectDuration(this)">
                                 <span class="popular-badge">Most Popular</span>
                                 <span class="duration"><i class="fas fa-clock"></i> 30 minutes</span>
-                                <span class="price">€90</span>
+                                <span class="price">€{{mjsk_jetski_circuit_30min}}</span>
                             </div>
                             <div class="price-row" data-activity="jetski-circuit-60" onclick="selectDuration(this)">
                                 <span class="duration"><i class="fas fa-clock"></i> 1 hour</span>
-                                <span class="price">€170</span>
+                                <span class="price">€{{mjsk_jetski_circuit_60min}}</span>
                             </div>
                         </div>
                         <p class="vat-note"><i class="fas fa-receipt"></i> All prices include VAT (IVA)</p>
@@ -340,7 +340,7 @@
                             <div class="feature"><i class="fas fa-check-circle"></i> Life jacket provided</div>
                             <div class="feature"><i class="fas fa-check-circle"></i> Instructor supervision</div>
                             <div class="feature"><i class="fas fa-check-circle"></i> GPS tracked (OtoTrak)</div>
-                            <div class="feature"><i class="fas fa-camera"></i> Optional professional photography service (€25)</div>
+                            <div class="feature"><i class="fas fa-camera"></i> Optional professional photography service (€{{mjsk_photo_service_price}})</div>
                         </div>
                         
                         <a href="booking.html?activity=jetski-circuit-30" class="btn btn-primary jetski-book-btn" data-default="jetski-circuit-30">
@@ -402,11 +402,11 @@
                             <div class="price-row popular" data-activity="jetski-excursion-60" onclick="selectDuration(this)">
                                 <span class="popular-badge">Most Popular</span>
                                 <span class="duration"><i class="fas fa-clock"></i> 1 hour excursion</span>
-                                <span class="price">€170</span>
+                                <span class="price">€{{mjsk_jetski_excursion_60min}}</span>
                             </div>
                             <div class="price-row" data-activity="jetski-excursion-120" onclick="selectDuration(this)">
                                 <span class="duration"><i class="fas fa-clock"></i> 2 hour excursion</span>
-                                <span class="price">€330</span>
+                                <span class="price">€{{mjsk_jetski_excursion_120min}}</span>
                             </div>
                         </div>
                         <p class="vat-note"><i class="fas fa-receipt"></i> All prices include VAT (IVA)</p>
@@ -454,7 +454,7 @@
                         <img src="assets/media/photos/wakeboard.jpg" alt="Wakeboarding in Marbella" loading="lazy">
                         <div class="activity-overlay">
                             <span class="activity-duration"><i class="fas fa-clock"></i> 20 min</span>
-                            <span class="activity-price">€90</span>
+                            <span class="activity-price">€{{mjsk_wakeboard_price}}</span>
                         </div>
                     </div>
                     <div class="activity-content">
@@ -473,7 +473,7 @@
                         <img src="assets/media/photos/waterski-action.jpg" alt="Water Skiing in Marbella" loading="lazy">
                         <div class="activity-overlay">
                             <span class="activity-duration"><i class="fas fa-clock"></i> 20 min</span>
-                            <span class="activity-price">€90</span>
+                            <span class="activity-price">€{{mjsk_waterski_price}}</span>
                         </div>
                     </div>
                     <div class="activity-content">
@@ -492,7 +492,7 @@
                         <img src="https://marbellajetski.com/wp-content/uploads/2023/05/IMG_9586-scaled.webp" alt="Crazy Sofa towable ride in Marbella" loading="lazy">
                         <div class="activity-overlay">
                             <span class="activity-duration"><i class="fas fa-clock"></i> 15 min</span>
-                            <span class="activity-price">€20<small>/person</small></span>
+                            <span class="activity-price">€{{mjsk_sofa_price}}<small>/person</small></span>
                         </div>
                         <div class="capacity-badge"><i class="fas fa-users"></i> Up to 6</div>
                     </div>
@@ -512,7 +512,7 @@
                         <img src="https://marbellajetski.com/wp-content/uploads/2023/05/DSC_0188-scaled.webp" alt="Water Bull towable ride in Marbella" loading="lazy">
                         <div class="activity-overlay">
                             <span class="activity-duration"><i class="fas fa-clock"></i> 10 min</span>
-                            <span class="activity-price">€20<small>/person</small></span>
+                            <span class="activity-price">€{{mjsk_waterbull_price}}<small>/person</small></span>
                         </div>
                         <div class="capacity-badge"><i class="fas fa-users"></i> Up to 6</div>
                     </div>
@@ -532,7 +532,7 @@
                         <img src="https://marbellajetski.com/wp-content/uploads/2023/05/IMG_9493-scaled.webp" alt="Banana Boat ride in Marbella" loading="lazy">
                         <div class="activity-overlay">
                             <span class="activity-duration"><i class="fas fa-clock"></i> 10 min</span>
-                            <span class="activity-price">€20<small>/person</small></span>
+                            <span class="activity-price">€{{mjsk_banana_price}}<small>/person</small></span>
                         </div>
                         <div class="capacity-badge"><i class="fas fa-users"></i> Up to 8</div>
                     </div>
@@ -552,7 +552,7 @@
                         <img src="assets/media/photos/airstream-action.jpg" alt="Air Stream towable in Marbella" loading="lazy">
                         <div class="activity-overlay">
                             <span class="activity-duration"><i class="fas fa-clock"></i> 10 min</span>
-                            <span class="activity-price">€20<small>/person</small></span>
+                            <span class="activity-price">€{{mjsk_airstream_price}}<small>/person</small></span>
                         </div>
                         <div class="capacity-badge"><i class="fas fa-users"></i> 1-6</div>
                     </div>
@@ -572,7 +572,7 @@
                         <img src="https://marbellajetski.com/wp-content/uploads/2023/05/IMG_0292-scaled.webp" alt="Donut Towable Ride in Marbella" loading="lazy">
                         <div class="activity-overlay">
                             <span class="activity-duration"><i class="fas fa-clock"></i> 10 min</span>
-                            <span class="activity-price">€20<small>/person</small></span>
+                            <span class="activity-price">€{{mjsk_donut_price}}<small>/person</small></span>
                         </div>
                         <div class="capacity-badge"><i class="fas fa-users"></i> Up to 6</div>
                     </div>
@@ -592,7 +592,7 @@
                         <img src="assets/media/photos/paddle-surf-man.jpg" alt="Stand Up Paddleboarding in Marbella" loading="lazy" style="object-fit:cover;object-position:center 30%;">
                         <div class="activity-overlay">
                             <span class="activity-duration"><i class="fas fa-clock"></i> 1 hour</span>
-                            <span class="activity-price">€25</span>
+                            <span class="activity-price">€{{mjsk_sup_price}}</span>
                         </div>
                     </div>
                     <div class="activity-content">
@@ -611,7 +611,7 @@
                         <img src="assets/media/photos/hidropedal-newbeetle.jpg" alt="Pedal Boats in Marbella" loading="lazy" style="object-fit:cover;object-position:center 40%;">
                         <div class="activity-overlay">
                             <span class="activity-duration"><i class="fas fa-clock"></i> 1 hour</span>
-                            <span class="activity-price">€30</span>
+                            <span class="activity-price">€{{mjsk_pedal_price}}</span>
                         </div>
                         <div class="capacity-badge"><i class="fas fa-users"></i> Up to 5</div>
                     </div>
@@ -631,7 +631,7 @@
                         <img src="assets/media/photos/kayak-double.jpg" alt="Double Kayak in Marbella" loading="lazy" style="object-fit:cover;object-position:center;">
                         <div class="activity-overlay">
                             <span class="activity-duration"><i class="fas fa-clock"></i> 1 hour</span>
-                            <span class="activity-price">€30</span>
+                            <span class="activity-price">€{{mjsk_kayak_price}}</span>
                         </div>
                         <div class="capacity-badge"><i class="fas fa-users"></i> 2 people</div>
                     </div>
@@ -700,17 +700,17 @@
                         </div>
                         <p>Spacious cruiser with cabin. Welcome drink, stereo, fuel & VAT all included.</p>
                         <div class="yacht-pricing-inline">
-                            <span class="yacht-from">From <strong>€400</strong></span>
+                            <span class="yacht-from">From <strong>€{{mjsk_rinker_2h}}</strong></span>
                             <button class="yacht-toggle-btn" onclick="this.closest('.yacht-card').classList.toggle('expanded')">
                                 Full Prices <i class="fas fa-chevron-down"></i>
                             </button>
                         </div>
                         <div class="yacht-price-details">
-                            <div class="yacht-price-row"><span>2 hours</span><span>€400</span></div>
-                            <div class="yacht-price-row"><span>3 hours</span><span>€600</span></div>
-                            <div class="yacht-price-row"><span>4 hours</span><span>€800</span></div>
-                            <div class="yacht-price-row"><span>6 hours</span><span>€1,100</span></div>
-                            <div class="yacht-price-row"><span>8 hours</span><span>€1,400</span></div>
+                            <div class="yacht-price-row"><span>2 hours</span><span>€{{mjsk_rinker_2h}}</span></div>
+                            <div class="yacht-price-row"><span>3 hours</span><span>€{{mjsk_rinker_3h}}</span></div>
+                            <div class="yacht-price-row"><span>4 hours</span><span>€{{mjsk_rinker_4h}}</span></div>
+                            <div class="yacht-price-row"><span>6 hours</span><span>€{{mjsk_rinker_6h}}</span></div>
+                            <div class="yacht-price-row"><span>8 hours</span><span>€{{mjsk_rinker_8h}}</span></div>
                         </div>
                         <a href="booking.html?yacht=rinker" class="btn btn-outline-light">Book This Boat</a>
                     </div>
@@ -732,17 +732,17 @@
                         </div>
                         <p>Elegant Italian open-concept design with lower cabin. Ideal for celebrations and VIP experiences.</p>
                         <div class="yacht-pricing-inline">
-                            <span class="yacht-from">From <strong>€550</strong></span>
+                            <span class="yacht-from">From <strong>€{{mjsk_cranchi_2h}}</strong></span>
                             <button class="yacht-toggle-btn" onclick="this.closest('.yacht-card').classList.toggle('expanded')">
                                 Full Prices <i class="fas fa-chevron-down"></i>
                             </button>
                         </div>
                         <div class="yacht-price-details">
-                            <div class="yacht-price-row"><span>2 hours</span><span>€550</span></div>
-                            <div class="yacht-price-row"><span>3 hours</span><span>€680</span></div>
-                            <div class="yacht-price-row"><span>4 hours</span><span>€850</span></div>
-                            <div class="yacht-price-row"><span>6 hours</span><span>€1,150</span></div>
-                            <div class="yacht-price-row"><span>8 hours</span><span>€1,550</span></div>
+                            <div class="yacht-price-row"><span>2 hours</span><span>€{{mjsk_cranchi_2h}}</span></div>
+                            <div class="yacht-price-row"><span>3 hours</span><span>€{{mjsk_cranchi_3h}}</span></div>
+                            <div class="yacht-price-row"><span>4 hours</span><span>€{{mjsk_cranchi_4h}}</span></div>
+                            <div class="yacht-price-row"><span>6 hours</span><span>€{{mjsk_cranchi_6h}}</span></div>
+                            <div class="yacht-price-row"><span>8 hours</span><span>€{{mjsk_cranchi_8h}}</span></div>
                         </div>
                         <a href="booking.html?yacht=cranchi" class="btn btn-primary">Book This Boat</a>
                     </div>
@@ -764,17 +764,17 @@
                         </div>
                         <p>The ultimate luxury flybridge yacht. Two champagne bottles, wine, paddle surf, and full insurance included.</p>
                         <div class="yacht-pricing-inline">
-                            <span class="yacht-from">From <strong>€600</strong></span>
+                            <span class="yacht-from">From <strong>€{{mjsk_azimut_2h}}</strong></span>
                             <button class="yacht-toggle-btn" onclick="this.closest('.yacht-card').classList.toggle('expanded')">
                                 Full Prices <i class="fas fa-chevron-down"></i>
                             </button>
                         </div>
                         <div class="yacht-price-details">
-                            <div class="yacht-price-row"><span>2 hours</span><span>€600</span></div>
-                            <div class="yacht-price-row"><span>3 hours</span><span>€800</span></div>
-                            <div class="yacht-price-row"><span>4 hours</span><span>€1,000</span></div>
-                            <div class="yacht-price-row"><span>6 hours</span><span>€1,500</span></div>
-                            <div class="yacht-price-row"><span>8 hours</span><span>€1,800</span></div>
+                            <div class="yacht-price-row"><span>2 hours</span><span>€{{mjsk_azimut_2h}}</span></div>
+                            <div class="yacht-price-row"><span>3 hours</span><span>€{{mjsk_azimut_3h}}</span></div>
+                            <div class="yacht-price-row"><span>4 hours</span><span>€{{mjsk_azimut_4h}}</span></div>
+                            <div class="yacht-price-row"><span>6 hours</span><span>€{{mjsk_azimut_6h}}</span></div>
+                            <div class="yacht-price-row"><span>8 hours</span><span>€{{mjsk_azimut_8h}}</span></div>
                         </div>
                         <a href="booking.html?yacht=azimut" class="btn btn-outline-light">Book This Boat</a>
                     </div>
@@ -796,17 +796,17 @@
                         </div>
                         <p>Spacious catamaran with 7 m beam and twin Volvo engines. Includes towels, paddle surf, snorkel, rosé, beer, cava & soft drinks.</p>
                         <div class="yacht-pricing-inline">
-                            <span class="yacht-from">From <strong>€750</strong>/2h</span>
+                            <span class="yacht-from">From <strong>€{{mjsk_catamaran_2h}}</strong>/2h</span>
                             <button class="yacht-toggle-btn" onclick="this.closest('.yacht-card').classList.toggle('expanded')">
                                 Full Prices <i class="fas fa-chevron-down"></i>
                             </button>
                         </div>
                         <div class="yacht-price-details">
-                            <div class="yacht-price-row"><span>2 hours</span><span>€750</span></div>
-                            <div class="yacht-price-row"><span>3 hours</span><span>€1,000</span></div>
-                            <div class="yacht-price-row"><span>4 hours</span><span>€1,150</span></div>
-                            <div class="yacht-price-row"><span>6 hours</span><span>€1,750</span></div>
-                            <div class="yacht-price-row"><span>8 hours</span><span>€2,250</span></div>
+                            <div class="yacht-price-row"><span>2 hours</span><span>€{{mjsk_catamaran_2h}}</span></div>
+                            <div class="yacht-price-row"><span>3 hours</span><span>€{{mjsk_catamaran_3h}}</span></div>
+                            <div class="yacht-price-row"><span>4 hours</span><span>€{{mjsk_catamaran_4h}}</span></div>
+                            <div class="yacht-price-row"><span>6 hours</span><span>€{{mjsk_catamaran_6h}}</span></div>
+                            <div class="yacht-price-row"><span>8 hours</span><span>€{{mjsk_catamaran_8h}}</span></div>
                         </div>
                         <a href="booking.html?yacht=catamaran" class="btn btn-outline-light">Book This Boat</a>
                     </div>
@@ -814,7 +814,7 @@
             </div>
             
             <div class="yacht-note" data-aos="fade-up" data-aos-delay="400" style="text-align:center;margin-top:40px;padding:20px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;">
-                <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;margin:0;"><i class="fas fa-info-circle" style="margin-right:8px;color:var(--primary);"></i>All boats operated by <strong>Marbella Ocean Boats</strong> from Puerto Banús. Every charter includes professional captain, fuel, insurance, and refreshments. All prices include VAT (IVA). <a href="https://api.whatsapp.com/send?phone=34655442232&text=Hi!%20I%27d%20like%20information%20about%20yacht%20charters" target="_blank" rel="noopener noreferrer" style="color:var(--primary);">Contact us for custom packages.</a></p>
+                <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;margin:0;"><i class="fas fa-info-circle" style="margin-right:8px;color:var(--primary);"></i>All boats operated by <strong>Marbella Ocean Boats</strong> from Puerto Banús. Every charter includes professional captain, fuel, insurance, and refreshments. All prices include VAT (IVA). <a href="https://api.whatsapp.com/send?phone={{mjsk_whatsapp}}&text=Hi!%20I%27d%20like%20information%20about%20yacht%20charters" target="_blank" rel="noopener noreferrer" style="color:var(--primary);">Contact us for custom packages.</a></p>
             </div>
         </div>
     </section>
@@ -846,8 +846,8 @@
                             <li><i class="fas fa-check"></i> All levels welcome</li>
                         </ul>
                         <div class="card-footer">
-                            <div class="price"><strong>&euro;299</strong></div>
-                            <a href="https://api.whatsapp.com/send?phone=34655442232&text=Hi!%20I%27d%20like%20to%20book%20a%20basic%20racing%20lesson%20(30min)." class="book-btn" target="_blank" rel="noopener noreferrer">
+                            <div class="price"><strong>&euro;{{mjsk_racing_basic_price}}</strong></div>
+                            <a href="https://api.whatsapp.com/send?phone={{mjsk_whatsapp}}&text=Hi!%20I%27d%20like%20to%20book%20a%20basic%20racing%20lesson%20(30min)." class="book-btn" target="_blank" rel="noopener noreferrer">
                                 Book <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
@@ -871,8 +871,8 @@
                             <li><i class="fas fa-check"></i> GoPro recording available</li>
                         </ul>
                         <div class="card-footer">
-                            <div class="price"><strong>&euro;499</strong></div>
-                            <a href="https://api.whatsapp.com/send?phone=34655442232&text=Hi!%20I%27d%20like%20to%20book%20a%201h%20racing%20experience." class="book-btn" target="_blank" rel="noopener noreferrer">
+                            <div class="price"><strong>&euro;{{mjsk_racing_intermediate_price}}</strong></div>
+                            <a href="https://api.whatsapp.com/send?phone={{mjsk_whatsapp}}&text=Hi!%20I%27d%20like%20to%20book%20a%201h%20racing%20experience." class="book-btn" target="_blank" rel="noopener noreferrer">
                                 Book <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
@@ -896,8 +896,8 @@
                             <li><i class="fas fa-check"></i> For experienced riders</li>
                         </ul>
                         <div class="card-footer">
-                            <div class="price"><strong>&euro;699</strong></div>
-                            <a href="https://api.whatsapp.com/send?phone=34655442232&text=Hi!%20I%27m%20interested%20in%20the%20Racing%20Masterclass%20(2h)." class="book-btn" target="_blank" rel="noopener noreferrer">
+                            <div class="price"><strong>&euro;{{mjsk_racing_masterclass_price}}</strong></div>
+                            <a href="https://api.whatsapp.com/send?phone={{mjsk_whatsapp}}&text=Hi!%20I%27m%20interested%20in%20the%20Racing%20Masterclass%20(2h)." class="book-btn" target="_blank" rel="noopener noreferrer">
                                 Book <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
@@ -1385,13 +1385,13 @@
                 </div>
                 
                 <div class="booking-contact-actions">
-                    <a href="https://api.whatsapp.com/send?phone=34655442232&text=Hi!%20I%27d%20like%20to%20book%20a%20water%20sports%20experience!" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                    <a href="https://api.whatsapp.com/send?phone={{mjsk_whatsapp}}&text=Hi!%20I%27d%20like%20to%20book%20a%20water%20sports%20experience!" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
                         <i class="fab fa-whatsapp"></i>
                         <span>WhatsApp Us</span>
                     </a>
-                    <a href="tel:+34655442232" class="btn btn-outline btn-glass">
+                    <a href="tel:+{{mjsk_whatsapp}}" class="btn btn-outline btn-glass">
                         <i class="fas fa-phone-alt"></i>
-                        <span>+34 655 442 232</span>
+                        <span>{{mjsk_phone}}</span>
                     </a>
                 </div>
                 
@@ -1517,7 +1517,7 @@
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>Absolutely! We cater for stag/hen parties, birthdays, corporate events, and large groups. Our group activities (banana boat, crazy sofa, donut ride) are priced per person (€20/pp), and we offer yacht charters for up to 12 guests. Contact us on <a href="https://api.whatsapp.com/send?phone=34655442232&text=Hi!%20I'd%20like%20to%20enquire%20about%20a%20group%20booking." target="_blank" rel="noopener noreferrer">WhatsApp</a> for custom group packages.</p>
+                        <p>Absolutely! We cater for stag/hen parties, birthdays, corporate events, and large groups. Our group activities (banana boat, crazy sofa, donut ride) are priced per person (€{{mjsk_sofa_price}}/pp), and we offer yacht charters for up to 12 guests. Contact us on <a href="https://api.whatsapp.com/send?phone={{mjsk_whatsapp}}&text=Hi!%20I'd%20like%20to%20enquire%20about%20a%20group%20booking." target="_blank" rel="noopener noreferrer">WhatsApp</a> for custom group packages.</p>
                     </div>
                 </div>
                 
@@ -1564,17 +1564,17 @@
                     <p class="contact-intro">Ready to make your aquatic adventure a reality? Reach out to us through any of these channels!</p>
                     
                     <div class="contact-methods">
-                        <a href="tel:+34655442232" class="contact-method">
+                        <a href="tel:+{{mjsk_whatsapp}}" class="contact-method">
                             <div class="method-icon">
                                 <i class="fas fa-phone-alt"></i>
                             </div>
                             <div class="method-details">
                                 <strong>Phone</strong>
-                                <span>+34 655 442 232</span>
+                                <span>{{mjsk_phone}}</span>
                             </div>
                         </a>
                         
-                        <a href="https://api.whatsapp.com/send?phone=34655442232" target="_blank" rel="noopener noreferrer" class="contact-method whatsapp">
+                        <a href="https://api.whatsapp.com/send?phone={{mjsk_whatsapp}}" target="_blank" rel="noopener noreferrer" class="contact-method whatsapp">
                             <div class="method-icon">
                                 <i class="fab fa-whatsapp"></i>
                             </div>
@@ -1584,13 +1584,13 @@
                             </div>
                         </a>
                         
-                        <a href="mailto:jetskimarbella@gmail.com" class="contact-method">
+                        <a href="mailto:{{mjsk_email}}" class="contact-method">
                             <div class="method-icon">
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div class="method-details">
                                 <strong>Email</strong>
-                                <span>jetskimarbella@gmail.com</span>
+                                <span>{{mjsk_email}}</span>
                             </div>
                         </a>
                         

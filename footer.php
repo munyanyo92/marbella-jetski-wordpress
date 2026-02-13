@@ -101,6 +101,14 @@
         </div>
     </footer>
 
+    <?php if (is_active_sidebar('above-footer')) : ?>
+    <div class="above-footer-area">
+        <div class="container">
+            <?php dynamic_sidebar('above-footer'); ?>
+        </div>
+    </div>
+    <?php endif; ?>
+
     <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/<?php echo esc_attr(mjsk_get('mjsk_whatsapp')); ?>?text=<?php echo rawurlencode("Hi! I'm interested in booking a water sports experience in Marbella. Can you help me?"); ?>" 
        class="whatsapp-float" 
