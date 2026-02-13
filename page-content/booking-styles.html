@@ -651,6 +651,54 @@
             .datetime-grid, .guests-grid { grid-template-columns: 1fr; }
             .deposit-toggle { flex-direction: column; }
             .policies-grid { grid-template-columns: 1fr; }
+            .dob-grid { grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+            .dob-grid select { font-size: 0.85rem; padding: 12px 8px; }
+            .activity-option { padding: 12px; }
+            .activity-option .option-grid { grid-template-columns: 1fr auto; gap: 8px; }
+        }
+        /* ========== DOB Dropdown Grid ========== */
+        .dob-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr 1fr;
+            gap: 10px;
+        }
+        .dob-grid select {
+            padding: 14px 12px;
+            border: 2px solid var(--gray-200);
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-family: var(--font-primary);
+            transition: border-color 0.3s ease;
+            background: #fff;
+            color: var(--dark);
+            cursor: pointer;
+            appearance: auto;
+        }
+        .dob-grid select:focus { border-color: var(--primary); outline: none; }
+
+        /* ========== Full Payment Box (non-boat) ========== */
+        .full-payment-box {
+            border: 2px solid #10b981;
+            border-radius: 12px;
+            padding: 24px;
+            background: rgba(16,185,129,0.03);
+            text-align: center;
+        }
+        .full-payment-box .full-payment-label {
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+        .full-payment-box .full-payment-amount {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #065f46;
+        }
+        .full-payment-box .full-payment-note {
+            font-size: 0.85rem;
+            color: var(--gray-500);
+            margin-top: 6px;
         }
         .validation-msg { background: #fef3c7; border: 1px solid #f59e0b; border-radius: 10px; padding: 14px 18px; margin: 15px 0; font-size: 0.88rem; color: #92400e; display: none; align-items: center; gap: 10px; }
         .validation-msg i { color: #f59e0b; font-size: 1.1rem; }

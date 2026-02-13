@@ -3663,6 +3663,33 @@ img {
     z-index: 2;
 }
 
+/* Hero Play Button (mobile fallback when autoplay blocked) */
+.hero-play-btn {
+    display: none; /* hidden by default, shown via JS when autoplay fails */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,255,0.8);
+    background: rgba(0,0,0,0.45);
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+    transition: transform 0.2s, background 0.2s;
+}
+.hero-play-btn:hover,
+.hero-play-btn:active {
+    transform: translate(-50%, -50%) scale(1.1);
+    background: rgba(0,180,216,0.6);
+}
+
 /* ========== Enhanced Service Cards ========== */
 .service-card {
     position: relative;

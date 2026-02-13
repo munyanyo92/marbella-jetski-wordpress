@@ -28,6 +28,26 @@ add_action('after_setup_theme', function () {
     ]);
 });
 
+// ============================================================
+//  MULTI-LANGUAGE REDIRECTS (all languages → English until translated)
+// ============================================================
+add_action('template_redirect', function () {
+    $request = trim($_SERVER['REQUEST_URI'], '/');
+    $lang_map = [
+        'es'              => '',
+        'es/booking'      => 'booking/',
+        'es/weather-policy' => 'weather-policy/',
+        'fr'              => '',
+        'nl'              => '',
+    ];
+    foreach ($lang_map as $lang_path => $en_path) {
+        if ($request === $lang_path || $request === $lang_path . '/') {
+            wp_redirect(home_url('/' . $en_path), 301);
+            exit;
+        }
+    }
+});
+
 
 // ============================================================
 //  WIDGET AREAS
@@ -90,11 +110,6 @@ add_action('wp_enqueue_scripts', function () {
         [], '11', true
     );
     wp_enqueue_script('mjsk-main', $uri . '/assets/js/script.js', ['aos-js', 'swiper-js'], $v, true);
-
-    // Jet ski animation (front page only)
-    if (is_front_page() && file_exists(get_template_directory() . '/assets/js/jetski-anim.js')) {
-        wp_enqueue_script('mjsk-jetski-anim', $uri . '/assets/js/jetski-anim.js', ['mjsk-main'], $v, true);
-    }
 
     // Pass theme data to JS
     wp_localize_script('mjsk-main', 'mjskData', [

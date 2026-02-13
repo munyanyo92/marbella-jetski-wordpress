@@ -2,10 +2,14 @@
     <section class="hero" id="home">
         <!-- Video Background — Jet Ski Drone Tracking (Pexels #4115690, free to use) -->
         <div class="hero-video-container">
-            <video autoplay muted loop playsinline poster="assets/media/photos/wp-uploads/18328-mar-scaled.jpg">
+            <video id="heroVideo" autoplay muted loop playsinline poster="assets/media/photos/wp-uploads/18328-mar-scaled.jpg">
                 <source src="https://videos.pexels.com/video-files/4115690/4115690-uhd_2560_1440_25fps.mp4" type="video/mp4">
             </video>
             <div class="hero-video-overlay"></div>
+            <!-- Tap-to-play overlay for mobile -->
+            <button class="hero-play-btn" id="heroPlayBtn" aria-label="Play video">
+                <i class="fas fa-play"></i>
+            </button>
         </div>
         
         <div class="hero-bg">
@@ -380,7 +384,7 @@
                             </div>
                         </div>
                         <p>Guided excursions in the open sea along the stunning Costa del Sol coastline. Choose from Puerto Banús, Fuengirola, or our signature Marbella Coastal Tour. Discover hidden coves and breathtaking views of Marbella's coast and landmarks. Possible dolphin sightings along the route (not guaranteed). All jet skis are GPS-tracked for your safety.</p>
-                        <p class="info-note" style="background:rgba(255,193,7,0.12);border-left:3px solid var(--accent-gold);padding:10px 14px;border-radius:6px;font-size:0.9em;margin-top:8px;"><i class="fas fa-exclamation-triangle" style="color:var(--accent-gold);margin-right:6px;"></i><strong>Minimum 2 jet skis required. Maximum 4 jet skis per excursion.</strong></p>
+                        <p class="info-note" style="background:rgba(255,193,7,0.12);border-left:3px solid var(--accent-gold);padding:10px 14px;border-radius:6px;font-size:0.9em;margin-top:8px;"><i class="fas fa-exclamation-triangle" style="color:var(--accent-gold);margin-right:6px;"></i><strong>Minimum 2 jet skis required. Maximum 6 jet skis per excursion.</strong></p>
                         <p class="info-note" style="background:rgba(0,180,216,0.08);border-left:3px solid var(--primary);padding:10px 14px;border-radius:6px;font-size:0.9em;margin-top:8px;"><i class="fas fa-info-circle" style="color:var(--primary);margin-right:6px;"></i>Each jet ski can carry 2 people (1–2 persons) and you can swap driver during the session — same price per jet ski.</p>
                         
                         <div class="excursion-routes">
@@ -847,7 +851,7 @@
                         </ul>
                         <div class="card-footer">
                             <div class="price"><strong>&euro;{{mjsk_racing_basic_price}}</strong></div>
-                            <a href="https://api.whatsapp.com/send?phone={{mjsk_whatsapp}}&text=Hi!%20I%27d%20like%20to%20book%20a%20basic%20racing%20lesson%20(30min)." class="book-btn" target="_blank" rel="noopener noreferrer">
+                            <a href="booking.html?activity=racing-basic" class="book-btn">
                                 Book <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
@@ -872,7 +876,7 @@
                         </ul>
                         <div class="card-footer">
                             <div class="price"><strong>&euro;{{mjsk_racing_intermediate_price}}</strong></div>
-                            <a href="https://api.whatsapp.com/send?phone={{mjsk_whatsapp}}&text=Hi!%20I%27d%20like%20to%20book%20a%201h%20racing%20experience." class="book-btn" target="_blank" rel="noopener noreferrer">
+                            <a href="booking.html?activity=racing-intermediate" class="book-btn">
                                 Book <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
@@ -897,7 +901,7 @@
                         </ul>
                         <div class="card-footer">
                             <div class="price"><strong>&euro;{{mjsk_racing_masterclass_price}}</strong></div>
-                            <a href="https://api.whatsapp.com/send?phone={{mjsk_whatsapp}}&text=Hi!%20I%27m%20interested%20in%20the%20Racing%20Masterclass%20(2h)." class="book-btn" target="_blank" rel="noopener noreferrer">
+                            <a href="booking.html?activity=racing-masterclass" class="book-btn">
                                 Book <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>

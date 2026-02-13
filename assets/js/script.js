@@ -761,10 +761,26 @@ function initBackToTop() {
 /* ========== Video Lazy Loading ========== */
 document.addEventListener('DOMContentLoaded', () => {
     const video = document.getElementById('heroVideo');
+    const playBtn = document.getElementById('heroPlayBtn');
     if (video) {
-        video.play().catch(() => {
-            // Autoplay was prevented, show a fallback
-            console.log('Video autoplay prevented by browser');
+        const playPromise = video.play();
+        if (playPromise !== undefined) {
+            playPromise.then(() => {
+                // Autoplay worked — hide play button
+                if (playBtn) playBtn.style.display = 'none';
+            }).catch(() => {
+                // Autoplay blocked (common on mobile) — show play button
+                console.log('Video autoplay prevented — showing play button');
+                if (playBtn) playBtn.style.display = 'flex';
+            });
+        }
+    }
+    if (playBtn && video) {
+        playBtn.addEventListener('click', () => {
+            video.muted = true; // keep muted to satisfy browser policy
+            video.play().then(() => {
+                playBtn.style.display = 'none';
+            }).catch(e => console.warn('Still cannot play:', e));
         });
     }
 });
