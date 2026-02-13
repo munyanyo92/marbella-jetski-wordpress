@@ -228,7 +228,7 @@ function mjsk_defaults() {
         'mjsk_hero_highlight'   => 'Ultimate Thrill',
         'mjsk_hero_line2'       => 'on the Mediterranean',
         'mjsk_hero_subtitle' => 'Premium Jet Ski Rentals · Luxury Yacht Charters · Water Sports Adventures',
-        'mjsk_season_text'   => 'Summer 2026 bookings now open!',
+        'mjsk_season_text'   => 'Summer 2026 bookings now open! Secure your dates early.',
         'mjsk_stat_established' => '1998',
         'mjsk_stat_activities'  => '15',
         'mjsk_stat_rating'      => '4.9/5 ★',
