@@ -163,6 +163,11 @@ function initNavigation() {
         });
     });
     
+    // Strip server-rendered active classes from anchor links — let scroll handler manage them
+    navLinks.forEach(link => {
+        if (link.getAttribute('href')?.startsWith('#')) link.classList.remove('active');
+    });
+
     // Active link on scroll
     window.addEventListener('scroll', () => {
         let current = '';
