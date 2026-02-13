@@ -200,6 +200,15 @@ html.menu-open .navbar.scrolled {
     padding: 8px 16px;
     font-size: 12px;
 }
+.navbar.scrolled .nav-menu {
+    gap: 18px;
+}
+.navbar.scrolled .nav-container {
+    gap: 20px;
+}
+.navbar.scrolled .nav-actions {
+    gap: 14px;
+}
 
 .nav-container {
     max-width: 1400px;
@@ -208,6 +217,7 @@ html.menu-open .navbar.scrolled {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 24px;
 }
 
 .nav-logo {
