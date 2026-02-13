@@ -43,9 +43,9 @@ add_action('widgets_init', function () {
         'after_title'   => '</h4>',
     ]);
     register_sidebar([
-        'name'          => __('Above Footer (Full Width)', 'marbellajetski'),
+        'name'          => __('After Footer (Full Width)', 'marbellajetski'),
         'id'            => 'above-footer',
-        'description'   => __('Full width area above the footer. Good for CTAs or newsletter signup.', 'marbellajetski'),
+        'description'   => __('Full width area after the footer. Good for CTAs or newsletter signup.', 'marbellajetski'),
         'before_widget' => '<div id="%1$s" class="above-footer-widget %2$s">',
         'after_widget'  => '</div>',
         'before_title'  => '<h3 class="widget-title">',
@@ -90,6 +90,11 @@ add_action('wp_enqueue_scripts', function () {
         [], '11', true
     );
     wp_enqueue_script('mjsk-main', $uri . '/assets/js/script.js', ['aos-js', 'swiper-js'], $v, true);
+
+    // Jet ski animation (front page only)
+    if (is_front_page() && file_exists(get_template_directory() . '/assets/js/jetski-anim.js')) {
+        wp_enqueue_script('mjsk-jetski-anim', $uri . '/assets/js/jetski-anim.js', ['mjsk-main'], $v, true);
+    }
 
     // Pass theme data to JS
     wp_localize_script('mjsk-main', 'mjskData', [
@@ -219,11 +224,13 @@ function mjsk_defaults() {
         'mjsk_promo_text'    => 'Early bird discount on all jet ski & yacht bookings for June–September 2026',
 
         // ── Hero ──
-        'mjsk_hero_title'    => 'Experience the Ultimate Thrill on the Mediterranean',
+        'mjsk_hero_line1'       => 'Experience the',
+        'mjsk_hero_highlight'   => 'Ultimate Thrill',
+        'mjsk_hero_line2'       => 'on the Mediterranean',
         'mjsk_hero_subtitle' => 'Premium Jet Ski Rentals · Luxury Yacht Charters · Water Sports Adventures',
         'mjsk_season_text'   => 'Summer 2026 bookings now open!',
         'mjsk_stat_established' => '1998',
-        'mjsk_stat_activities'  => '15+',
+        'mjsk_stat_activities'  => '15',
         'mjsk_stat_rating'      => '4.9/5 ★',
         'mjsk_review_count'     => '500+',
 
@@ -381,7 +388,9 @@ add_action('customize_register', function ($wp_customize) {
 
     // ── Section: Hero & Branding ──
     $wp_customize->add_section('mjsk_hero', ['title' => __('Hero & Branding', 'marbellajetski'), 'panel' => 'mjsk_panel_site', 'priority' => 40]);
-    $add_text('mjsk_hero_title',        'Hero Title', 'mjsk_hero');
+    $add_text('mjsk_hero_line1',         'Hero Line 1 (e.g. "Experience the")', 'mjsk_hero');
+    $add_text('mjsk_hero_highlight',     'Hero Highlight Text (gradient, e.g. "Ultimate Thrill")', 'mjsk_hero');
+    $add_text('mjsk_hero_line2',         'Hero Line 2 (e.g. "on the Mediterranean")', 'mjsk_hero');
     $add_text('mjsk_hero_subtitle',     'Hero Subtitle', 'mjsk_hero');
     $add_text('mjsk_season_text',       'Season Text (e.g. "Summer 2026 bookings now open!")', 'mjsk_hero');
     $add_text('mjsk_stat_established',  'Stat: Year Established', 'mjsk_hero');
@@ -498,9 +507,10 @@ add_action('wp_head', function () {
         "description": "Premier jet ski hire, luxury boat rentals & water sports in Marbella",
         "url": "<?php echo esc_url(home_url('/')); ?>",
         "telephone": "<?php echo esc_attr(mjsk_get('mjsk_phone')); ?>",
+        "email": "<?php echo esc_attr(mjsk_get('mjsk_email')); ?>",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Arroyo de la playa de las dunas, Urbanización Pinomar",
+            "streetAddress": "<?php echo esc_attr(mjsk_get('mjsk_address')); ?>",
             "addressLocality": "Marbella",
             "postalCode": "29604",
             "addressRegion": "Málaga",
@@ -513,9 +523,16 @@ add_action('wp_head', function () {
             "opens": "11:00", "closes": "20:00"
         },
         "priceRange": "€€",
-        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "500" },
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "<?php echo esc_attr(mjsk_get('mjsk_review_count')); ?>" },
         "founder": { "@type": "Person", "name": "Daniel Stiers", "jobTitle": "Founder & Pro Racing Champion" },
-        "foundingDate": "1998"
+        "foundingDate": "<?php echo esc_attr(mjsk_get('mjsk_stat_established')); ?>",
+        "sameAs": [
+            "<?php echo esc_url(mjsk_get('mjsk_facebook')); ?>",
+            "<?php echo esc_url(mjsk_get('mjsk_instagram')); ?>",
+            "<?php echo esc_url(mjsk_get('mjsk_tiktok')); ?>",
+            "<?php echo esc_url(mjsk_get('mjsk_youtube')); ?>",
+            "<?php echo esc_url(mjsk_get('mjsk_tripadvisor')); ?>"
+        ]
     }
     </script>
     <?php endif;

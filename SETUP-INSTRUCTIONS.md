@@ -4,7 +4,7 @@
 
 A complete WordPress theme that replicates the existing static website exactly. The design, animations, booking form, and all functionality are preserved. The WP admin lets you manage:
 
-- **All prices (85+ fields)** — Appearance → Customize → Pricing (All Services)
+- **All prices (78 fields)** — Appearance → Customize → Pricing (All Services)
 - **Contact details** — Appearance → Customize → Site Settings → Contact Details
 - **Social links** — Appearance → Customize → Site Settings → Social Media Links
 - **Promo banner** — Appearance → Customize → Site Settings → Promo Banner

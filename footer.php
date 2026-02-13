@@ -10,8 +10,8 @@
                         </a>
                         <p>Costa del Sol's premier water sports destination. Family-owned since 1998, led by 4x Spanish National Champion Daniel Stiers.</p>
                         <div class="footer-certifications">
-                            <img src="https://marbellajetski.com/wp-content/uploads/2022/05/WhatsApp-Image-2022-05-13-at-7.22.08-PM.jpeg" alt="ISO 9001 Certificate" loading="lazy">
-                            <img src="https://marbellajetski.com/wp-content/uploads/2022/05/WhatsApp-Image-2022-05-13-at-7.22.21-PM.jpeg" alt="ISO 14001 Certificate" loading="lazy">
+                            <img src="<?php echo mjsk_asset('media/photos/cert-iso-9001.jpeg'); ?>" alt="ISO 9001 Certificate" loading="lazy">
+                            <img src="<?php echo mjsk_asset('media/photos/cert-iso-14001.jpeg'); ?>" alt="ISO 14001 Certificate" loading="lazy">
                         </div>
                     </div>
                     

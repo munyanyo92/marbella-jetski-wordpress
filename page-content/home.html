@@ -2,7 +2,7 @@
     <section class="hero" id="home">
         <!-- Video Background — Jet Ski Drone Tracking (Pexels #4115690, free to use) -->
         <div class="hero-video-container">
-            <video autoplay muted loop playsinline poster="https://marbellajetski.com/wp-content/uploads/2021/09/18328-mar-scaled.jpg">
+            <video autoplay muted loop playsinline poster="assets/media/photos/wp-uploads/18328-mar-scaled.jpg">
                 <source src="https://videos.pexels.com/video-files/4115690/4115690-uhd_2560_1440_25fps.mp4" type="video/mp4">
             </video>
             <div class="hero-video-overlay"></div>
@@ -10,7 +10,7 @@
         
         <div class="hero-bg">
             <!-- Background Image Fallback -->
-            <img src="https://marbellajetski.com/wp-content/uploads/2021/09/18328-mar-scaled.jpg" 
+            <img src="assets/media/photos/wp-uploads/18328-mar-scaled.jpg" 
                  alt="Jet Ski Marbella - Real Action" 
                  class="hero-bg-image"
                  loading="eager"
@@ -23,28 +23,28 @@
         
         <div class="hero-content">
             <h1 class="hero-title" data-aos="fade-up" data-aos-delay="400">
-                <span class="title-line">Experience the</span>
-                <span class="title-highlight">Ultimate Thrill</span>
-                <span class="title-line">on the Mediterranean</span>
+                <span class="title-line">{{mjsk_hero_line1}}</span>
+                <span class="title-highlight">{{mjsk_hero_highlight}}</span>
+                <span class="title-line">{{mjsk_hero_line2}}</span>
             </h1>
             
             <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="600">
-                Premium Jet Ski Rentals · Luxury Yacht Charters · Water Sports Adventures
+                {{mjsk_hero_subtitle}}
             </p>
             
             <div class="hero-stats" data-aos="fade-up" data-aos-delay="800">
                 <div class="stat-item">
-                    <span class="stat-number no-plus">1998</span>
+                    <span class="stat-number no-plus">{{mjsk_stat_established}}</span>
                     <span class="stat-label">Established</span>
                 </div>
                 <div class="stat-divider"></div>
                 <div class="stat-item">
-                    <span class="stat-number" data-count="15">0</span>
+                    <span class="stat-number" data-count="{{mjsk_stat_activities}}">0</span>
                     <span class="stat-label">Activities</span>
                 </div>
                 <div class="stat-divider"></div>
                 <div class="stat-item">
-                    <span class="stat-number no-plus">4.9/5 ★</span>
+                    <span class="stat-number no-plus">{{mjsk_stat_rating}}</span>
                     <span class="stat-label">Rating</span>
                 </div>
             </div>
@@ -109,7 +109,7 @@
             <div class="services-grid">
                 <div class="service-card featured premium-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-icon">
-                        <img src="https://marbellajetski.com/wp-content/uploads/2023/05/IMG_1247-scaled.webp" alt="Jet Ski" loading="lazy">
+                        <img src="assets/media/photos/wp-uploads/img_1247-scaled.webp" alt="Jet Ski" loading="lazy">
                         <div class="icon-overlay">
                             <i class="fas fa-water"></i>
                         </div>
@@ -117,7 +117,7 @@
                     <div class="service-content">
                         <span class="service-tag">Most Popular</span>
                         <h3>Jet Ski Hire</h3>
-                        <p>Experience the thrill on our latest Yamaha jet skis. Circuit rides or coastal excursions available.</p>
+                        <p>{{mjsk_desc_jetski}}</p>
                         <div class="service-price">
                             <span class="from">From</span>
                             <span class="price">{{mjsk_card_jetski_from}}</span>
@@ -140,7 +140,7 @@
                     <div class="service-content">
                         <span class="service-tag">Luxury</span>
                         <h3>Yacht Charters</h3>
-                        <p>Cruise the coast in style. Captain, fuel, drinks and paddleboard included.</p>
+                        <p>{{mjsk_desc_yachts}}</p>
                         <div class="service-price">
                             <span class="from">From</span>
                             <span class="price">{{mjsk_card_yacht_from}}</span>
@@ -155,7 +155,7 @@
                 
                 <div class="service-card premium-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="service-icon">
-                        <img src="https://marbellajetski.com/wp-content/uploads/2023/05/IMG_9493-scaled.webp" alt="Water Sports" loading="lazy">
+                        <img src="assets/media/photos/wp-uploads/img_9493-scaled.webp" alt="Water Sports" loading="lazy">
                         <div class="icon-overlay">
                             <i class="fas fa-umbrella-beach"></i>
                         </div>
@@ -163,7 +163,7 @@
                     <div class="service-content">
                         <span class="service-tag">Family Fun</span>
                         <h3>Water Sports</h3>
-                        <p>Wakeboarding, banana boats, crazy sofa, donuts & more for all ages!</p>
+                        <p>{{mjsk_desc_watersports}}</p>
                         <div class="service-price">
                             <span class="from">From</span>
                             <span class="price">{{mjsk_card_watersports_from}}</span>
@@ -178,7 +178,7 @@
                 
                 <div class="service-card premium-card" data-aos="fade-up" data-aos-delay="400">
                     <div class="service-icon">
-                        <img src="https://marbellajetski.com/wp-content/uploads/2023/05/DSC_0245-scaled.webp" alt="Guided Jet Ski Excursions on the Costa del Sol" loading="lazy" style="object-position:center">
+                        <img src="assets/media/photos/wp-uploads/dsc_0245-scaled.webp" alt="Guided Jet Ski Excursions on the Costa del Sol" loading="lazy" style="object-position:center">
                         <div class="icon-overlay">
                             <i class="fas fa-route"></i>
                         </div>
@@ -186,7 +186,7 @@
                     <div class="service-content">
                         <span class="service-tag">Adventure</span>
                         <h3>Guided Excursions</h3>
-                        <p>Explore Puerto Banús, Fuengirola and hidden coves with our expert guides.</p>
+                        <p>{{mjsk_desc_excursions}}</p>
                         <div class="service-price">
                             <span class="from">From</span>
                             <span class="price">{{mjsk_card_excursions_from}}</span>
@@ -209,7 +209,7 @@
                     <div class="service-content">
                         <span class="service-tag">Racing</span>
                         <h3>Racing Experience</h3>
-                        <p>Train with a professional racer. Circuit sessions, technique coaching & pure adrenaline.</p>
+                        <p>{{mjsk_desc_racing}}</p>
                         <div class="service-price">
                             <span class="from">From</span>
                             <span class="price">{{mjsk_card_racing_from}}</span>
@@ -291,9 +291,9 @@
                     <div class="option-visual">
                         <div class="swiper jetski-carousel">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="https://marbellajetski.com/wp-content/uploads/2023/05/DSC_0062-scaled.webp" alt="Jet Ski Circuit" loading="lazy"></div>
-                                <div class="swiper-slide"><img src="https://marbellajetski.com/wp-content/uploads/2023/05/IMG_1247-scaled.webp" alt="Yamaha Jet Ski fleet" loading="lazy"></div>
-                                <div class="swiper-slide"><img src="https://marbellajetski.com/wp-content/uploads/2023/05/IMG_0052-scaled.webp" alt="Jet Ski circuit action" loading="lazy"></div>
+                                <div class="swiper-slide"><img src="assets/media/photos/wp-uploads/dsc_0062-scaled.webp" alt="Jet Ski Circuit" loading="lazy"></div>
+                                <div class="swiper-slide"><img src="assets/media/photos/wp-uploads/img_1247-scaled.webp" alt="Yamaha Jet Ski fleet" loading="lazy"></div>
+                                <div class="swiper-slide"><img src="assets/media/photos/wp-uploads/img_0052-scaled.webp" alt="Jet Ski circuit action" loading="lazy"></div>
                             </div>
                             <div class="swiper-pagination"></div>
                         </div>
@@ -355,9 +355,9 @@
                     <div class="option-visual">
                         <div class="swiper jetski-carousel">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="https://marbellajetski.com/wp-content/uploads/2023/05/DSC_0245-scaled.webp" alt="Jet Ski Excursion along the Costa del Sol coast" loading="lazy"></div>
-                                <div class="swiper-slide"><img src="https://marbellajetski.com/wp-content/uploads/2023/05/DSC_0055-scaled.webp" alt="Coastal Jet Ski tour" loading="lazy"></div>
-                                <div class="swiper-slide"><img src="https://marbellajetski.com/wp-content/uploads/2023/05/DSC_0031-scaled.webp" alt="Jet Ski excursion fleet" loading="lazy"></div>
+                                <div class="swiper-slide"><img src="assets/media/photos/wp-uploads/dsc_0245-scaled.webp" alt="Jet Ski Excursion along the Costa del Sol coast" loading="lazy"></div>
+                                <div class="swiper-slide"><img src="assets/media/photos/wp-uploads/dsc_0055-scaled.webp" alt="Coastal Jet Ski tour" loading="lazy"></div>
+                                <div class="swiper-slide"><img src="assets/media/photos/wp-uploads/dsc_0031-scaled.webp" alt="Jet Ski excursion fleet" loading="lazy"></div>
                             </div>
                             <div class="swiper-pagination"></div>
                         </div>
@@ -489,7 +489,7 @@
                 <!-- Crazy Sofa -->
                 <div class="activity-card" data-category="family" data-aos="fade-up" data-aos-delay="200">
                     <div class="activity-image">
-                        <img src="https://marbellajetski.com/wp-content/uploads/2023/05/IMG_9586-scaled.webp" alt="Crazy Sofa towable ride in Marbella" loading="lazy">
+                        <img src="assets/media/photos/wp-uploads/img_9586-scaled.webp" alt="Crazy Sofa towable ride in Marbella" loading="lazy">
                         <div class="activity-overlay">
                             <span class="activity-duration"><i class="fas fa-clock"></i> 15 min</span>
                             <span class="activity-price">€{{mjsk_sofa_price}}<small>/person</small></span>
@@ -509,7 +509,7 @@
                 <!-- Water Bull -->
                 <div class="activity-card" data-category="family thrill" data-aos="fade-up" data-aos-delay="250">
                     <div class="activity-image">
-                        <img src="https://marbellajetski.com/wp-content/uploads/2023/05/DSC_0188-scaled.webp" alt="Water Bull towable ride in Marbella" loading="lazy">
+                        <img src="assets/media/photos/wp-uploads/dsc_0188-scaled.webp" alt="Water Bull towable ride in Marbella" loading="lazy">
                         <div class="activity-overlay">
                             <span class="activity-duration"><i class="fas fa-clock"></i> 10 min</span>
                             <span class="activity-price">€{{mjsk_waterbull_price}}<small>/person</small></span>
@@ -529,7 +529,7 @@
                 <!-- Banana Boat -->
                 <div class="activity-card" data-category="family thrill" data-aos="fade-up" data-aos-delay="300">
                     <div class="activity-image">
-                        <img src="https://marbellajetski.com/wp-content/uploads/2023/05/IMG_9493-scaled.webp" alt="Banana Boat ride in Marbella" loading="lazy">
+                        <img src="assets/media/photos/wp-uploads/img_9493-scaled.webp" alt="Banana Boat ride in Marbella" loading="lazy">
                         <div class="activity-overlay">
                             <span class="activity-duration"><i class="fas fa-clock"></i> 10 min</span>
                             <span class="activity-price">€{{mjsk_banana_price}}<small>/person</small></span>
@@ -569,7 +569,7 @@
                 <!-- Donut Ride -->
                 <div class="activity-card" data-category="family thrill" data-aos="fade-up" data-aos-delay="400">
                     <div class="activity-image">
-                        <img src="https://marbellajetski.com/wp-content/uploads/2023/05/IMG_0292-scaled.webp" alt="Donut Towable Ride in Marbella" loading="lazy">
+                        <img src="assets/media/photos/wp-uploads/img_0292-scaled.webp" alt="Donut Towable Ride in Marbella" loading="lazy">
                         <div class="activity-overlay">
                             <span class="activity-duration"><i class="fas fa-clock"></i> 10 min</span>
                             <span class="activity-price">€{{mjsk_donut_price}}<small>/person</small></span>
@@ -967,10 +967,10 @@
                             <img src="assets/media/photos/logo-circular.png" alt="Marbella JetSki Logo" style="width:80%;max-width:320px;height:auto;object-fit:contain;">
                         </div>
                         <div class="about-image secondary">
-                            <img src="https://marbellajetski.com/wp-content/uploads/2022/05/WhatsApp-Image-2022-05-13-at-7.22.08-PM.jpeg" alt="ISO 9001 Certificate">
+                            <img src="assets/media/photos/cert-iso-9001.jpeg" alt="ISO 9001 Certificate">
                         </div>
                         <div class="about-image tertiary">
-                            <img src="https://marbellajetski.com/wp-content/uploads/2022/05/WhatsApp-Image-2022-05-13-at-7.22.21-PM.jpeg" alt="ISO 14001 Certificate">
+                            <img src="assets/media/photos/cert-iso-14001.jpeg" alt="ISO 14001 Certificate">
                         </div>
                     </div>
                     
@@ -1030,7 +1030,7 @@
             
             <div class="gallery-grid" data-aos="fade-up">
                 <div class="gallery-item large" onclick="openLightbox(0)">
-                    <img src="https://marbellajetski.com/wp-content/uploads/2023/05/IMG_0052-scaled.webp" alt="Jet Ski Action in Marbella" loading="lazy">
+                    <img src="assets/media/photos/wp-uploads/img_0052-scaled.webp" alt="Jet Ski Action in Marbella" loading="lazy">
                     <div class="gallery-overlay">
                         <span class="gallery-tag">Jet Ski</span>
                         <i class="fas fa-search-plus"></i>
@@ -1051,35 +1051,35 @@
                     </div>
                 </div>
                 <div class="gallery-item" onclick="openLightbox(3)">
-                    <img src="https://marbellajetski.com/wp-content/uploads/2023/05/IMG_3961-scaled.webp" alt="Marbella Beach Location" loading="lazy">
+                    <img src="assets/media/photos/wp-uploads/img_3961-scaled.webp" alt="Marbella Beach Location" loading="lazy">
                     <div class="gallery-overlay">
                         <span class="gallery-tag">Our Beach</span>
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
                 <div class="gallery-item" onclick="openLightbox(4)">
-                    <img src="https://marbellajetski.com/wp-content/uploads/2021/07/IMG_6208-scaled.jpg" alt="Luxury yacht charter Marbella" loading="lazy">
+                    <img src="assets/media/photos/wp-uploads/img_6208-scaled.jpg" alt="Luxury yacht charter Marbella" loading="lazy">
                     <div class="gallery-overlay">
                         <span class="gallery-tag">Yacht Charter</span>
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
                 <div class="gallery-item" onclick="openLightbox(5)">
-                    <img src="https://marbellajetski.com/wp-content/uploads/2023/05/IMG_3846-scaled.webp" alt="Water sports action on the Costa del Sol" loading="lazy">
+                    <img src="assets/media/photos/wp-uploads/img_3846-scaled.webp" alt="Water sports action on the Costa del Sol" loading="lazy">
                     <div class="gallery-overlay">
                         <span class="gallery-tag">Water Fun</span>
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
                 <div class="gallery-item wide" onclick="openLightbox(6)">
-                    <img src="https://marbellajetski.com/wp-content/uploads/2023/05/DSC_0055-scaled.webp" alt="Jet Ski Excursion Costa del Sol" loading="lazy">
+                    <img src="assets/media/photos/wp-uploads/dsc_0055-scaled.webp" alt="Jet Ski Excursion Costa del Sol" loading="lazy">
                     <div class="gallery-overlay">
                         <span class="gallery-tag">Excursions</span>
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
                 <div class="gallery-item" onclick="openLightbox(7)">
-                    <img src="https://marbellajetski.com/wp-content/uploads/2023/05/DSC_0031-scaled.webp" alt="Water sports fleet Marbella" loading="lazy">
+                    <img src="assets/media/photos/wp-uploads/dsc_0031-scaled.webp" alt="Water sports fleet Marbella" loading="lazy">
                     <div class="gallery-overlay">
                         <span class="gallery-tag">Luxury Fleet</span>
                         <i class="fas fa-search-plus"></i>
@@ -1201,19 +1201,19 @@
             <div class="gallery-cta" data-aos="fade-up">
                 <p>Follow us for more action shots and behind-the-scenes content!</p>
                 <div class="social-links">
-                    <a href="https://www.instagram.com/jetskimarbella/" target="_blank" rel="noopener noreferrer" class="social-link instagram">
+                    <a href="{{mjsk_instagram}}" target="_blank" rel="noopener noreferrer" class="social-link instagram">
                         <i class="fab fa-instagram"></i>
                         <span>@jetskimarbella</span>
                     </a>
-                    <a href="https://www.facebook.com/jetskimarbella/" target="_blank" rel="noopener noreferrer" class="social-link facebook">
+                    <a href="{{mjsk_facebook}}" target="_blank" rel="noopener noreferrer" class="social-link facebook">
                         <i class="fab fa-facebook-f"></i>
                         <span>Facebook</span>
                     </a>
-                    <a href="https://www.tiktok.com/@jetskimarbella" target="_blank" rel="noopener noreferrer" class="social-link" style="background:linear-gradient(135deg,#25f4ee,#fe2c55);color:#fff;">
+                    <a href="{{mjsk_tiktok}}" target="_blank" rel="noopener noreferrer" class="social-link" style="background:linear-gradient(135deg,#25f4ee,#fe2c55);color:#fff;">
                         <i class="fab fa-tiktok"></i>
                         <span>TikTok</span>
                     </a>
-                    <a href="https://www.youtube.com/@marbellajetski" target="_blank" rel="noopener noreferrer" class="social-link" style="background:#ff0000;color:#fff;">
+                    <a href="{{mjsk_youtube}}" target="_blank" rel="noopener noreferrer" class="social-link" style="background:#ff0000;color:#fff;">
                         <i class="fab fa-youtube"></i>
                         <span>YouTube</span>
                     </a>
@@ -1396,7 +1396,7 @@
                 </div>
                 
                 <p class="booking-note">
-                    <i class="fas fa-clock"></i> Open daily 11am – 8pm · Walk-ins welcome at Playa de las Dunas
+                    <i class="fas fa-clock"></i> {{mjsk_hours}} · Walk-ins welcome at {{mjsk_address}}
                 </p>
             </div>
         </div>
@@ -1600,7 +1600,7 @@
                             </div>
                             <div class="method-details">
                                 <strong>Hours</strong>
-                                <span>Daily 11am - 8pm</span>
+                                <span>{{mjsk_hours}}</span>
                             </div>
                         </div>
                         
@@ -1610,7 +1610,7 @@
                             </div>
                             <div class="method-details">
                                 <strong>Location</strong>
-                                <span>Playa de las Dunas, Marbella</span>
+                                <span>{{mjsk_address}}</span>
                             </div>
                         </div>
                     </div>
@@ -1618,13 +1618,13 @@
                     <div class="social-follow">
                         <h4>Follow Us</h4>
                         <div class="social-icons">
-                            <a href="https://www.facebook.com/jetskimarbella/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <a href="{{mjsk_facebook}}" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
-                            <a href="https://www.instagram.com/jetskimarbella/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <a href="{{mjsk_instagram}}" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a href="https://www.tripadvisor.es/Attraction_Review-g187439-d6949698-Reviews-Marbella_Jet_Ski-Marbella_Costa_del_Sol_Province_of_Malaga_Andalucia.html" target="_blank" rel="noopener noreferrer" aria-label="TripAdvisor">
+                            <a href="{{mjsk_tripadvisor}}" target="_blank" rel="noopener noreferrer" aria-label="TripAdvisor">
                                 <i class="fab fa-tripadvisor"></i>
                             </a>
                         </div>
