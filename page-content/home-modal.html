@@ -1,0 +1,55 @@
+
+    <!-- Boat Detail Modal -->
+    <div class="boat-modal-overlay" id="boatModal" onclick="if(event.target===this)closeBoatModal()">
+        <div class="boat-modal">
+            <button class="boat-modal-close" onclick="closeBoatModal()" aria-label="Close"><i class="fas fa-times"></i></button>
+            <div class="boat-modal-body">
+                <div class="boat-modal-gallery">
+                    <div class="boat-modal-main-img">
+                        <img id="boatModalMainImg" src="" alt="">
+                        <button class="boat-gallery-nav boat-gallery-prev" onclick="changeBoatImage(-1)"><i class="fas fa-chevron-left"></i></button>
+                        <button class="boat-gallery-nav boat-gallery-next" onclick="changeBoatImage(1)"><i class="fas fa-chevron-right"></i></button>
+                        <div class="boat-img-counter" id="boatImgCounter">1 / 8</div>
+                    </div>
+                    <div class="boat-modal-thumbs" id="boatModalThumbs"></div>
+                </div>
+                <div class="boat-modal-info">
+                    <span class="boat-modal-badge" id="boatModalBadge"></span>
+                    <h2 id="boatModalTitle"></h2>
+                    <p class="boat-modal-desc" id="boatModalDesc"></p>
+                    <div class="boat-modal-specs" id="boatModalSpecs"></div>
+                    <div class="boat-modal-included">
+                        <h4><i class="fas fa-check-circle"></i> What's Included</h4>
+                        <ul id="boatModalIncluded"></ul>
+                    </div>
+                    <div class="boat-modal-pricing">
+                        <h4><i class="fas fa-tag"></i> Charter Rates</h4>
+                        <div class="boat-pricing-table" id="boatModalPricing"></div>
+                    </div>
+                    <a id="boatModalBookBtn" href="booking.html?yacht=rinker" class="btn btn-primary boat-modal-book">
+                        <i class="fas fa-calendar-check"></i> Book This Boat
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/34655442232?text=Hi!%20I'm%20interested%20in%20booking%20a%20water%20sports%20experience%20in%20Marbella.%20Can%20you%20help%20me?" 
+       class="whatsapp-float" 
+       target="_blank" rel="noopener noreferrer" 
+       aria-label="Chat on WhatsApp"
+       id="whatsappFloat">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Chat with us!</span>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js?v=2026021113"></script>

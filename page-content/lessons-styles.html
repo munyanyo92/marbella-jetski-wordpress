@@ -1,0 +1,699 @@
+    <style>
+        /* ============================================================
+           LESSONS PAGE — HERO
+        ============================================================ */
+        .lessons-hero {
+            position: relative;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3e 50%, #0d1b2a 100%);
+        }
+
+        .lessons-hero .hero-video-bg {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+            opacity: 0.3;
+        }
+
+        .lessons-hero .hero-overlay {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(10,10,26,0.8) 100%);
+        }
+
+        .lessons-hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 120px 20px 80px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .lessons-hero-content .hero-badge-animated {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 10px 24px;
+            border-radius: 50px;
+            color: rgba(255,255,255,0.9);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .lessons-hero-content h1 {
+            font-family: var(--font-display);
+            font-size: clamp(36px, 6vw, 64px);
+            font-weight: 900;
+            color: white;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .lessons-hero-content .name-highlight {
+            background: linear-gradient(135deg, var(--accent-gold), #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .lessons-hero-content .hero-subtitle {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.7;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .lessons-hero .hero-cta-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .lessons-hero .hero-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.4s ease;
+        }
+
+        .lessons-hero .hero-btn-primary {
+            background: var(--gradient-primary);
+            color: white;
+            box-shadow: 0 10px 30px rgba(0,180,216,0.3);
+        }
+
+        .lessons-hero .hero-btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,180,216,0.4);
+        }
+
+        .lessons-hero .hero-btn-secondary {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .lessons-hero .hero-btn-secondary:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-3px);
+        }
+
+        /* ============================================================
+           WHAT TO EXPECT
+        ============================================================ */
+        .expect-section {
+            padding: 100px 20px;
+            background: linear-gradient(180deg, #ffffff 0%, #f0f9ff 100%);
+        }
+
+        .expect-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .expect-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .expect-header h2 {
+            font-size: clamp(32px, 4.5vw, 50px);
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .expect-header p {
+            font-size: 18px;
+            color: var(--gray-600);
+            max-width: 650px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .expect-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .expect-card {
+            background: white;
+            border-radius: 24px;
+            padding: 40px 30px;
+            text-align: center;
+            border: 1px solid var(--gray-200);
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .expect-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.5s ease;
+        }
+
+        .expect-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .expect-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+        }
+
+        .expect-card .icon-wrap {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, rgba(0,180,216,0.1), rgba(0,119,182,0.1));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.6rem;
+            color: var(--primary);
+            transition: all 0.4s ease;
+        }
+
+        .expect-card:hover .icon-wrap {
+            background: var(--gradient-primary);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .expect-card h4 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .expect-card p {
+            font-size: 0.9rem;
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 1024px) {
+            .expect-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 600px) {
+            .expect-grid { grid-template-columns: 1fr; }
+            .expect-section { padding: 70px 20px; }
+        }
+
+        /* ============================================================
+           CTA BANNER
+        ============================================================ */
+        .lessons-cta-section {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3e 50%, #0d1b2a 100%);
+            text-align: center;
+        }
+
+        .lessons-cta-section h2 {
+            font-family: var(--font-display);
+            font-size: clamp(28px, 4vw, 44px);
+            font-weight: 800;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .lessons-cta-section p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.7);
+            max-width: 600px;
+            margin: 0 auto 30px;
+            line-height: 1.7;
+        }
+
+        .lessons-cta-section .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .lessons-cta-section .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 18px 36px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.4s ease;
+        }
+
+        .lessons-cta-section .cta-btn.primary {
+            background: var(--gradient-primary);
+            color: white;
+            box-shadow: 0 10px 30px rgba(0,180,216,0.3);
+        }
+
+        .lessons-cta-section .cta-btn.primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,180,216,0.4);
+        }
+
+        .lessons-cta-section .cta-btn.whatsapp {
+            background: #25D366;
+            color: white;
+        }
+
+        .lessons-cta-section .cta-btn.whatsapp:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(37,211,102,0.4);
+        }
+
+        /* ============================================================
+           RACING VIDEOS
+        ============================================================ */
+        .video-action-section {
+            padding: 100px 20px;
+            background: linear-gradient(180deg, #0a0a1a 0%, #0d1b2a 100%);
+        }
+
+        .video-container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .video-header {
+            text-align: center;
+            margin-bottom: 60px;
+            color: white;
+        }
+
+        .video-header h2 {
+            font-size: clamp(32px, 4.5vw, 50px);
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .video-header p {
+            font-size: 18px;
+            color: rgba(255,255,255,0.6);
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .racing-videos-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .racing-video-card {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.5s ease;
+        }
+
+        .racing-video-card:hover {
+            border-color: var(--accent-gold);
+            transform: translateY(-5px);
+        }
+
+        .racing-video-card.racing-featured-video {
+            grid-column: span 2;
+        }
+
+        .racing-video-card video {
+            width: 100%;
+            display: block;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            background: #000;
+            transition: all 0.4s ease;
+        }
+
+        .racing-video-card.video-playing video {
+            aspect-ratio: unset;
+            object-fit: contain;
+            max-height: 80vh;
+        }
+
+        .video-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            z-index: 5;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .video-info {
+            padding: 18px 20px;
+            position: relative;
+            z-index: 10;
+            transition: background 0.4s, color 0.4s;
+        }
+
+        .racing-video-card.video-playing .video-info {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.55);
+            color: #fff;
+            padding: 24px 24px 18px 24px;
+            z-index: 10;
+            width: 100%;
+            box-sizing: border-box;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            pointer-events: none;
+        }
+
+        .video-info h4 {
+            color: white;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .video-info span {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 768px) {
+            .racing-videos-grid { grid-template-columns: 1fr; }
+            .racing-video-card.racing-featured-video { grid-column: span 1; }
+            .racing-video-card.video-playing .video-info {
+                padding: 16px 10px 12px 10px;
+                font-size: 0.95rem;
+                border-radius: 0 0 16px 16px;
+            }
+            .racing-video-card.video-playing video {
+                max-height: 40vh;
+            }
+        }
+
+        /* ============================================================
+           RACING GALLERY
+        ============================================================ */
+        .racing-gallery-section {
+            padding: 100px 20px;
+            background: linear-gradient(180deg, #0d1b2a 0%, #1a1a3e 50%, #0a0a1a 100%);
+        }
+
+        .racing-gallery-container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .racing-gallery-header {
+            text-align: center;
+            margin-bottom: 50px;
+            color: white;
+        }
+
+        .racing-gallery-header h2 {
+            font-size: clamp(32px, 4.5vw, 50px);
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .racing-gallery-header p {
+            font-size: 18px;
+            color: rgba(255,255,255,0.6);
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .racing-photo-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        .racing-photo-item {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            cursor: pointer;
+            aspect-ratio: 4/3;
+        }
+
+        .racing-photo-item.wide {
+            grid-column: span 2;
+        }
+
+        .racing-photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .racing-photo-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .photo-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 15px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .racing-photo-item:hover .photo-overlay {
+            opacity: 1;
+        }
+
+        .photo-overlay span {
+            color: white;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .racing-photo-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        /* Lightbox */
+        .racing-lightbox {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 10000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .racing-lightbox.active {
+            display: flex;
+        }
+
+        .racing-lightbox img {
+            max-width: 90%;
+            max-height: 85vh;
+            object-fit: contain;
+            border-radius: 12px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            background: rgba(255,255,255,0.1);
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .lightbox-close:hover { background: rgba(255,255,255,0.2); }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.1);
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .lightbox-nav:hover { background: rgba(255,255,255,0.2); }
+        .lightbox-prev { left: 20px; }
+        .lightbox-next { right: 20px; }
+
+        /* ============================================================
+           CAREER TIMELINE SECTION
+        ============================================================ */
+        .timeline-section {
+            padding: 120px 0;
+            background: linear-gradient(180deg, var(--dark) 0%, #1a1a2e 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .timeline-section::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .timeline-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 30px;
+            position: relative;
+            z-index: 1;
+        }
+        .timeline-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        .timeline-header h2 {
+            font-family: var(--font-display);
+            font-size: 48px;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .timeline-header h2 span {
+            background: linear-gradient(135deg, #ffc300, #e6ac00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .timeline-header p {
+            font-size: 18px;
+            color: rgba(255,255,255,0.7);
+        }
+        .timeline-wrapper { position: relative; }
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, #ffc300, var(--primary), var(--secondary));
+            border-radius: 4px;
+        }
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        .timeline-item:last-child { margin-bottom: 0; }
+        .timeline-item:nth-child(odd) { flex-direction: row-reverse; }
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #ffc300, #e6ac00);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            color: var(--dark);
+            font-size: 12px;
+            box-shadow: 0 0 30px rgba(255,195,0,0.5);
+            z-index: 2;
+        }
+        .timeline-content {
+            width: calc(50% - 60px);
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 35px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+        }
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.08);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        }
+        .timeline-content h3 {
+            font-family: var(--font-display);
+            font-size: 24px;
+            color: white;
+            margin-bottom: 12px;
+        }
+        .timeline-content p {
+            color: rgba(255,255,255,0.7);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+        .timeline-content .highlight {
+            color: #ffc300;
+            font-weight: 600;
+        }
+
+        /* ============================================================
+           RESPONSIVE — HERO
+        ============================================================ */
+        @media (max-width: 768px) {
+            .lessons-hero-content h1 { font-size: 36px; }
+            .lessons-hero .hero-cta-group { flex-direction: column; align-items: center; }
+            .lessons-hero .hero-btn { width: 100%; max-width: 300px; justify-content: center; }
+            .timeline-line { left: 15px; }
+            .timeline-item { padding-left: 50px; }
+            .timeline-item:nth-child(odd) { flex-direction: row; }
+            .timeline-dot { left: 0; width: 30px; height: 30px; font-size: 9px; }
+            .timeline-content { width: 100%; }
+            .timeline-header h2 { font-size: 32px; }
+        }
+    </style>

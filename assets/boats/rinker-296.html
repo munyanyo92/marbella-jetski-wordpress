@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rinker 296 Captiva | Marbella JetSki - Yacht Charter</title>
+    <meta name="description" content="Charter the Rinker 296 Captiva in Marbella. 9.4m, 8 guests. Captain, fuel, drinks included. From €250/h. Book your luxury boat experience on the Costa del Sol.">
+    <link rel="icon" type="image/png" href="../assets/media/photos/logo-circular.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .boat-detail-hero {
+            background: var(--dark);
+            padding: 140px 0 60px;
+            text-align: center;
+        }
+        .boat-detail-hero h1 {
+            font-size: clamp(28px, 4vw, 48px);
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 8px;
+        }
+        .boat-detail-hero .boat-badge {
+            display: inline-block;
+            background: var(--gradient-primary);
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 4px 16px;
+            border-radius: 30px;
+            margin-bottom: 16px;
+        }
+        .boat-detail-hero p {
+            color: rgba(255,255,255,0.7);
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.05rem;
+        }
+        .boat-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+        .boat-back:hover { opacity: 0.8; }
+        .boat-content {
+            padding: 60px 0;
+            background: linear-gradient(180deg, #ffffff 0%, #f0f9ff 100%);
+        }
+        .boat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        @media (max-width: 768px) {
+            .boat-grid { grid-template-columns: 1fr; }
+        }
+        .boat-specs-card {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+        }
+        .boat-specs-card h2 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        .spec-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--gray-200);
+            font-size: 0.95rem;
+        }
+        .spec-row:last-child { border-bottom: none; }
+        .spec-row .label { color: var(--gray-600); }
+        .spec-row .value { font-weight: 600; color: var(--dark); }
+        .boat-pricing-card {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+        }
+        .boat-pricing-card h2 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        .boat-price-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--gray-200);
+            font-size: 1rem;
+        }
+        .boat-price-row:last-child { border-bottom: none; }
+        .boat-price-row .duration { color: var(--gray-700); }
+        .boat-price-row .amount { font-weight: 700; color: var(--primary-dark); font-size: 1.1rem; }
+        .boat-includes {
+            margin-top: 24px;
+            padding: 20px;
+            background: rgba(0,180,216,0.06);
+            border-radius: 12px;
+        }
+        .boat-includes h3 {
+            font-size: 1rem;
+            margin-bottom: 12px;
+            color: var(--dark);
+        }
+        .boat-includes ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+        .boat-includes li {
+            font-size: 0.9rem;
+            color: var(--gray-700);
+        }
+        .boat-includes li i {
+            color: var(--primary);
+            margin-right: 6px;
+        }
+        .boat-cta {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .boat-gallery-section {
+            padding: 60px 0;
+            background: var(--dark);
+        }
+        .boat-gallery-section h2 {
+            text-align: center;
+            color: var(--white);
+            font-size: 1.6rem;
+            margin-bottom: 32px;
+        }
+        .boat-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .boat-gallery-grid img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .boat-gallery-grid img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 30px rgba(0,180,216,0.2);
+        }
+        .boat-description {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 40px;
+        }
+        .boat-description p {
+            color: var(--gray-700);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            max-width: 800px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html#home" class="nav-logo">
+                <img src="../assets/media/photos/logo-circular.png" alt="Marbella JetSki Logo" class="logo-image" style="height: 65px;">
+                <span class="logo-text">MARBELLA<span class="logo-highlight">JETSKI</span></span>
+            </a>
+            <div class="nav-menu" id="navMenu">
+                <a href="../index.html#home" class="nav-link">Home</a>
+                <a href="../index.html#services" class="nav-link">Services</a>
+                <a href="../index.html#jetski" class="nav-link">Jet Ski</a>
+                <a href="../index.html#watersports" class="nav-link">Water Sports</a>
+                <a href="../index.html#boats" class="nav-link active">Yachts</a>
+                <a href="../about-us.html" class="nav-link">About</a>
+                <a href="../index.html#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <a href="../booking.html" class="nav-cta"><span>Book Now</span><i class="fas fa-calendar-check"></i></a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="boat-detail-hero">
+            <div class="container">
+                <a href="../index.html#boats" class="boat-back"><i class="fas fa-arrow-left"></i> Back to Fleet</a>
+                <span class="boat-badge">Value Pick</span>
+                <h1>Rinker 296 Captiva</h1>
+                <p>Spacious cruiser with cabin. Perfect for a relaxing day along the Marbella coastline with friends and family.</p>
+            </div>
+        </section>
+
+        <section class="boat-content">
+            <div class="boat-description">
+                <p>The Rinker 296 Captiva is a versatile and comfortable cruiser, ideal for groups of up to 8 guests. With a generous 9.4-metre length, it offers plenty of space on deck and a cosy lower cabin. Enjoy a scenic cruise along the Costa del Sol with all the essentials included — professional captain, fuel, welcome drink, and a premium sound system.</p>
+            </div>
+            <div class="boat-grid">
+                <div class="boat-specs-card">
+                    <h2><i class="fas fa-info-circle" style="color:var(--primary);margin-right:8px;"></i>Specifications</h2>
+                    <div class="spec-row"><span class="label">Length</span><span class="value">9.4 m</span></div>
+                    <div class="spec-row"><span class="label">Capacity</span><span class="value">8 guests</span></div>
+                    <div class="spec-row"><span class="label">Cabin</span><span class="value">1 lower cabin</span></div>
+                    <div class="spec-row"><span class="label">Departure</span><span class="value">Puerto Banús Dock 5</span></div>
+                    <div class="spec-row"><span class="label">Type</span><span class="value">Motor Cruiser</span></div>
+                </div>
+                <div class="boat-pricing-card">
+                    <h2><i class="fas fa-tag" style="color:var(--primary);margin-right:8px;"></i>Prices</h2>
+                    <div class="boat-price-row"><span class="duration">2 hours</span><span class="amount">€400</span></div>
+                    <div class="boat-price-row"><span class="duration">3 hours</span><span class="amount">€600</span></div>
+                    <div class="boat-price-row"><span class="duration">4 hours</span><span class="amount">€800</span></div>
+                    <div class="boat-price-row"><span class="duration">6 hours</span><span class="amount">€1,100</span></div>
+                    <div class="boat-price-row"><span class="duration">8 hours</span><span class="amount">€1,400</span></div>
+                    <p style="font-size:0.82rem;color:var(--gray-500);margin-top:10px;"><i class="fas fa-receipt" style="margin-right:5px;"></i>All prices include VAT (IVA)</p>
+
+                    <div class="boat-includes">
+                        <h3><i class="fas fa-check-circle" style="color:var(--primary);margin-right:6px;"></i>What's Included</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Professional Captain</li>
+                            <li><i class="fas fa-check"></i> Fuel</li>
+                            <li><i class="fas fa-check"></i> Welcome Drink</li>
+                            <li><i class="fas fa-check"></i> Sound System</li>
+                            <li><i class="fas fa-check"></i> Insurance</li>
+                            <li><i class="fas fa-check"></i> VAT included</li>
+                        </ul>
+                    </div>
+
+                    <div class="boat-cta">
+                        <a href="https://api.whatsapp.com/send?phone=34655442232&text=Hi!%20I%27d%20like%20to%20book%20the%20Rinker%20296" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i> Book This Boat
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="boat-gallery-section">
+            <h2>Gallery</h2>
+            <div class="boat-gallery-grid">
+                <img src="../assets/media/photos/rinker-296-alt.jpg" alt="Rinker 296 Captiva exterior" loading="lazy">
+                <img src="../assets/media/photos/rinker-296.jpg" alt="Rinker 296 Captiva at sea" loading="lazy">
+                <img src="../assets/media/photos/boats/rinker_captiva_296_img1.png" alt="Rinker 296 Captiva" loading="lazy">
+                <img src="../assets/media/photos/boats/rinker_captiva_296_img3.png" alt="Rinker 296 at dock" loading="lazy">
+                <img src="../assets/media/photos/boats/rinker_captiva_296_img12.png" alt="Rinker 296 at sea" loading="lazy">
+                <img src="../assets/media/photos/boats/rinker_captiva_296_page1.png" alt="Rinker 296 brochure" loading="lazy">
+                <img src="../assets/media/photos/boats/rinker_captiva_296_page2.png" alt="Rinker 296 details" loading="lazy">
+                <img src="../assets/media/photos/boats/rinker_captiva_296_page3.png" alt="Rinker 296 specifications" loading="lazy">
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="container">
+                <div class="footer-bottom">
+                    <p>© 2026 STIERS E HIJOS S.L. (Marbella JetSki). All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

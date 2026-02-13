@@ -1,0 +1,1153 @@
+    <!-- Hero -->
+    <section class="booking-page-hero">
+        <div class="container">
+            <h1>Book Your <span class="gradient-text-animated">Adventure</span></h1>
+            <p>Select your activity, choose a date, and secure your spot in minutes. Open daily 11am – 8pm.</p>
+        </div>
+    </section>
+
+    <!-- Booking Main -->
+    <section class="booking-main">
+        <div class="container">
+            <!-- Steps Indicator -->
+            <div class="booking-steps">
+                <div class="step active" data-step="1">
+                    <span class="step-number">1</span> Choose Activity
+                </div>
+                <div class="step" data-step="2">
+                    <span class="step-number">2</span> Date & Details
+                </div>
+                <div class="step" data-step="3">
+                    <span class="step-number">3</span> Your Info
+                </div>
+                <div class="step" data-step="4">
+                    <span class="step-number">4</span> Payment
+                </div>
+            </div>
+
+            <div class="booking-layout">
+                <div class="booking-form-area">
+                    <!-- STEP 1: Choose Activity -->
+                    <div class="step-panel active" id="step1">
+                        <h3><i class="fas fa-water"></i> Choose Your Activity</h3>
+                        
+                        <div class="category-tabs">
+                            <button class="cat-tab active" data-cat="all">All</button>
+                            <button class="cat-tab" data-cat="jetski">Jet Ski</button>
+                            <button class="cat-tab" data-cat="watersports">Water Sports</button>
+                            <button class="cat-tab" data-cat="yacht">Yacht Charters</button>
+                            <button class="cat-tab" data-cat="training" style="border-color:var(--accent-gold);color:var(--accent-gold);"><i class="fas fa-trophy"></i> With a Professional Pilot</button>
+                        </div>
+
+                        <div class="activity-options" id="activityList">
+                            <!-- Jet Ski -->
+                            <label class="activity-option" data-cat="jetski">
+                                <input type="radio" name="activity" value="jetski-circuit-20" data-price="70" data-name="Jet Ski Circuit" data-duration="20 min" data-type="circuit">
+                                <div>
+                                    <div class="name">Jet Ski Circuit</div>
+                                    <div class="duration">20 minutes</div>
+                                </div>
+                                <span class="capacity"><i class="fas fa-user"></i> 1-2</span>
+                                <span class="price">€70</span>
+                            </label>
+                            <label class="activity-option" data-cat="jetski">
+                                <input type="radio" name="activity" value="jetski-circuit-30" data-price="90" data-name="Jet Ski Circuit" data-duration="30 min" data-type="circuit">
+                                <div>
+                                    <div class="name">Jet Ski Circuit</div>
+                                    <div class="duration">30 minutes</div>
+                                </div>
+                                <span class="capacity"><i class="fas fa-user"></i> 1-2</span>
+                                <span class="price">€90</span>
+                            </label>
+                            <label class="activity-option" data-cat="jetski">
+                                <input type="radio" name="activity" value="jetski-circuit-60" data-price="170" data-name="Jet Ski Circuit" data-duration="1 hour" data-type="circuit">
+                                <div>
+                                    <div class="name">Jet Ski Circuit <span style="color:var(--secondary);font-size:0.75rem;font-weight:700;">POPULAR</span></div>
+                                    <div class="duration">1 hour</div>
+                                </div>
+                                <span class="capacity"><i class="fas fa-user"></i> 1-2</span>
+                                <span class="price">€170</span>
+                            </label>
+                            <label class="activity-option" data-cat="jetski">
+                                <input type="radio" name="activity" value="jetski-circuit-120" data-price="330" data-name="Jet Ski Circuit" data-duration="2 hours" data-type="circuit">
+                                <div>
+                                    <div class="name">Jet Ski Circuit</div>
+                                    <div class="duration">2 hours</div>
+                                </div>
+                                <span class="capacity"><i class="fas fa-user"></i> 1-2</span>
+                                <span class="price">€330</span>
+                            </label>
+                            <label class="activity-option" data-cat="jetski">
+                                <input type="radio" name="activity" value="jetski-excursion-60" data-price="170" data-name="Jet Ski Excursion" data-duration="1 hour" data-type="tour">
+                                <div>
+                                    <div class="name">Jet Ski Excursion</div>
+                                    <div class="duration">1 hour — Puerto Banús / Fuengirola / Coastal Tour</div>
+                                </div>
+                                <span class="capacity"><i class="fas fa-user"></i> 1-2</span>
+                                <span class="price">€170</span>
+                            </label>
+
+                            <!-- Water Sports -->
+                            <label class="activity-option" data-cat="watersports">
+                                <input type="radio" name="activity" value="wakeboard" data-price="90" data-name="Wakeboarding" data-duration="20 min" data-per="ride">
+                                <div>
+                                    <div class="name">Wakeboarding</div>
+                                    <div class="duration">20 minutes</div>
+                                </div>
+                                <span class="capacity"><i class="fas fa-user"></i> 1</span>
+                                <span class="price">€90</span>
+                            </label>
+                            <label class="activity-option" data-cat="watersports">
+                                <input type="radio" name="activity" value="waterski" data-price="90" data-name="Water Skiing" data-duration="20 min" data-per="ride">
+                                <div>
+                                    <div class="name">Water Skiing</div>
+                                    <div class="duration">20 minutes</div>
+                                </div>
+                                <span class="capacity"><i class="fas fa-user"></i> 1</span>
+                                <span class="price">€90</span>
+                            </label>
+                            <label class="activity-option" data-cat="watersports">
+                                <input type="radio" name="activity" value="banana" data-price="20" data-name="Banana Boat" data-duration="10 min" data-per="person" data-type="towable">
+                                <div>
+                                    <div class="name">Banana Boat</div>
+                                    <div class="duration">10 min · €20/person · Min. 2 people</div>
+                                </div>
+                                <span class="capacity"><i class="fas fa-users"></i> 2-8</span>
+                                <span class="price">€20<small>/pp</small></span>
+                            </label>
+                            <label class="activity-option" data-cat="watersports">
+                                <input type="radio" name="activity" value="sofa" data-price="20" data-name="Crazy Sofa" data-duration="10 min" data-per="person" data-type="towable">
+                                <div>
+                                    <div class="name">Crazy Sofa</div>
+                                    <div class="duration">10 min · €20/person · Min. 2 people</div>
+                                </div>
+                                <span class="capacity"><i class="fas fa-users"></i> 2-6</span>
+                                <span class="price">€20<small>/pp</small></span>
+                            </label>
+                            <label class="activity-option" data-cat="watersports">
+                                <input type="radio" name="activity" value="waterbull" data-price="20" data-name="Water Bull" data-duration="10 min" data-per="person" data-type="towable">
+                                <div>
+                                    <div class="name">Water Bull</div>
+                                    <div class="duration">10 min · €20/person · Min. 2 people</div>
+                                </div>
+                                <span class="capacity"><i class="fas fa-users"></i> 2-6</span>
+                                <span class="price">€20<small>/pp</small></span>
+                            </label>
+                            <label class="activity-option" data-cat="watersports">
+                                <input type="radio" name="activity" value="airstream" data-price="20" data-name="Air Stream" data-duration="10 min" data-per="person" data-type="towable">
+                                <div>
+                                    <div class="name">Air Stream</div>
+                                    <div class="duration">10 min · €20/person · Min. 2 people</div>
+                                </div>
+                                <span class="capacity"><i class="fas fa-users"></i> 2-6</span>
+                                <span class="price">€20<small>/pp</small></span>
+                            </label>
+                            <label class="activity-option" data-cat="watersports">
+                                <input type="radio" name="activity" value="donut" data-price="20" data-name="Donut Ride" data-duration="10 min" data-per="person" data-type="towable">
+                                <div>
+                                    <div class="name">Donut Ride</div>
+                                    <div class="duration">10 min · €20/person · Min. 2 people</div>
+                                </div>
+                                <span class="capacity"><i class="fas fa-users"></i> 2-6</span>
+                                <span class="price">€20<small>/pp</small></span>
+                            </label>
+                            <label class="activity-option" data-cat="watersports">
+                                <input type="radio" name="activity" value="sup" data-price="25" data-name="Stand-Up Paddleboarding" data-duration="1 hour" data-type="sup">
+                                <div>
+                                    <div class="name">Stand-Up Paddleboarding (SUP) <span style="font-size:0.75rem;color:var(--gray-500);">Individual</span></div>
+                                    <div class="duration">1 hour · Individual activity (1 person per board)</div>
+                                </div>
+                                <span class="capacity"><i class="fas fa-user"></i> 1</span>
+                                <span class="price">€25</span>
+                            </label>
+                            <label class="activity-option" data-cat="watersports">
+                                <input type="radio" name="activity" value="pedal" data-price="30" data-name="Pedal Boat with Slide" data-duration="1 hour">
+                                <div>
+                                    <div class="name">Pedal Boat (Hydro-Pedal with Slide)</div>
+                                    <div class="duration">1 hour · Family friendly!</div>
+                                </div>
+                                <span class="capacity"><i class="fas fa-users"></i> Up to 5</span>
+                                <span class="price">€30</span>
+                            </label>
+
+                            <!-- Yacht Charters — Per Yacht Accordion -->
+                            <div class="yacht-accordion" data-cat="yacht">
+                                <div class="yacht-acc-header" onclick="this.parentElement.classList.toggle('open')">
+                                    <img src="assets/media/photos/azimut-39.jpg" alt="Azimut 39 Fly" class="yacht-acc-thumb">
+                                    <div class="yacht-acc-info">
+                                        <div class="name">Azimut 39 Fly <span class="yacht-acc-badge luxury">Flybridge Luxury</span></div>
+                                        <div class="duration">12.3m · Captain, fuel, champagne, wine, paddle surf, sound system</div>
+                                    </div>
+                                    <span class="capacity"><i class="fas fa-users"></i> Up to 12</span>
+                                    <span class="price">From €600</span>
+                                    <i class="fas fa-chevron-down yacht-acc-arrow"></i>
+                                </div>
+                                <div class="yacht-acc-body">
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="azimut-2h" data-price="600" data-name="Azimut 39 Fly" data-duration="2 hours">
+                                        <div><div class="name">2 Hours</div></div>
+                                        <span class="price">€600</span>
+                                    </label>
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="azimut-3h" data-price="800" data-name="Azimut 39 Fly" data-duration="3 hours">
+                                        <div><div class="name">3 Hours</div></div>
+                                        <span class="price">€800</span>
+                                    </label>
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="azimut-4h" data-price="1000" data-name="Azimut 39 Fly" data-duration="4 hours">
+                                        <div><div class="name">4 Hours <span style="color:var(--secondary);font-size:0.75rem;font-weight:700;">BEST VALUE</span></div></div>
+                                        <span class="price">€1,000</span>
+                                    </label>
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="azimut-6h" data-price="1500" data-name="Azimut 39 Fly" data-duration="6 hours">
+                                        <div><div class="name">6 Hours</div></div>
+                                        <span class="price">€1,500</span>
+                                    </label>
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="azimut-8h" data-price="1800" data-name="Azimut 39 Fly" data-duration="Full day (8h)">
+                                        <div><div class="name">Full Day (8h)</div></div>
+                                        <span class="price">€1,800</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="yacht-accordion" data-cat="yacht">
+                                <div class="yacht-acc-header" onclick="this.parentElement.classList.toggle('open')">
+                                    <img src="assets/media/photos/cranchi-39.jpg" alt="Cranchi 39" class="yacht-acc-thumb">
+                                    <div class="yacht-acc-info">
+                                        <div class="name">Cranchi 39 <span class="yacht-acc-badge premium">Premium</span></div>
+                                        <div class="duration">12.3m · Captain, fuel, drinks & wine, paddleboard</div>
+                                    </div>
+                                    <span class="capacity"><i class="fas fa-users"></i> Up to 9</span>
+                                    <span class="price">From €550</span>
+                                    <i class="fas fa-chevron-down yacht-acc-arrow"></i>
+                                </div>
+                                <div class="yacht-acc-body">
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="cranchi-2h" data-price="550" data-name="Cranchi 39" data-duration="2 hours">
+                                        <div><div class="name">2 Hours</div></div>
+                                        <span class="price">€550</span>
+                                    </label>
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="cranchi-3h" data-price="680" data-name="Cranchi 39" data-duration="3 hours">
+                                        <div><div class="name">3 Hours</div></div>
+                                        <span class="price">€680</span>
+                                    </label>
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="cranchi-4h" data-price="850" data-name="Cranchi 39" data-duration="4 hours">
+                                        <div><div class="name">4 Hours <span style="color:var(--secondary);font-size:0.75rem;font-weight:700;">BEST VALUE</span></div></div>
+                                        <span class="price">€850</span>
+                                    </label>
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="cranchi-6h" data-price="1150" data-name="Cranchi 39" data-duration="6 hours">
+                                        <div><div class="name">6 Hours</div></div>
+                                        <span class="price">€1,150</span>
+                                    </label>
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="cranchi-8h" data-price="1550" data-name="Cranchi 39" data-duration="Full day (8h)">
+                                        <div><div class="name">Full Day (8h)</div></div>
+                                        <span class="price">€1,550</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="yacht-accordion" data-cat="yacht">
+                                <div class="yacht-acc-header" onclick="this.parentElement.classList.toggle('open')">
+                                    <img src="assets/media/photos/rinker-296-alt.jpg" alt="Rinker 296 Captiva" class="yacht-acc-thumb">
+                                    <div class="yacht-acc-info">
+                                        <div class="name">Rinker 296 Captiva <span class="yacht-acc-badge">Value Pick</span></div>
+                                        <div class="duration">9.4m · Captain, fuel, welcome drink, sound system</div>
+                                    </div>
+                                    <span class="capacity"><i class="fas fa-users"></i> Up to 8</span>
+                                    <span class="price">From €400</span>
+                                    <i class="fas fa-chevron-down yacht-acc-arrow"></i>
+                                </div>
+                                <div class="yacht-acc-body">
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="rinker-2h" data-price="400" data-name="Rinker 296 Captiva" data-duration="2 hours">
+                                        <div><div class="name">2 Hours</div></div>
+                                        <span class="price">€400</span>
+                                    </label>
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="rinker-3h" data-price="600" data-name="Rinker 296 Captiva" data-duration="3 hours">
+                                        <div><div class="name">3 Hours</div></div>
+                                        <span class="price">€600</span>
+                                    </label>
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="rinker-4h" data-price="800" data-name="Rinker 296 Captiva" data-duration="4 hours">
+                                        <div><div class="name">4 Hours <span style="color:var(--secondary);font-size:0.75rem;font-weight:700;">BEST VALUE</span></div></div>
+                                        <span class="price">€800</span>
+                                    </label>
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="rinker-6h" data-price="1100" data-name="Rinker 296 Captiva" data-duration="6 hours">
+                                        <div><div class="name">6 Hours</div></div>
+                                        <span class="price">€1,100</span>
+                                    </label>
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="rinker-8h" data-price="1400" data-name="Rinker 296 Captiva" data-duration="Full day (8h)">
+                                        <div><div class="name">Full Day (8h)</div></div>
+                                        <span class="price">€1,400</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="yacht-accordion" data-cat="yacht">
+                                <div class="yacht-acc-header" onclick="this.parentElement.classList.toggle('open')">
+                                    <img src="assets/media/photos/catamaran-bali.jpg" alt="Catamaran Bali 4.0" class="yacht-acc-thumb">
+                                    <div class="yacht-acc-info">
+                                        <div class="name">Catamaran Bali 4.0 <span class="yacht-acc-badge luxury">Catamaran</span></div>
+                                        <div class="duration">12.5m · Captain, fuel, rosé, beer, cava, paddle surf, snorkel, towels</div>
+                                    </div>
+                                    <span class="capacity"><i class="fas fa-users"></i> 12 + crew</span>
+                                    <span class="price">From €750</span>
+                                    <i class="fas fa-chevron-down yacht-acc-arrow"></i>
+                                </div>
+                                <div class="yacht-acc-body">
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="catamaran-2h" data-price="750" data-name="Catamaran Bali 4.0" data-duration="2 hours">
+                                        <div><div class="name">2 Hours</div></div>
+                                        <span class="price">€750</span>
+                                    </label>
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="catamaran-3h" data-price="1000" data-name="Catamaran Bali 4.0" data-duration="3 hours">
+                                        <div><div class="name">3 Hours</div></div>
+                                        <span class="price">€1,000</span>
+                                    </label>
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="catamaran-4h" data-price="1150" data-name="Catamaran Bali 4.0" data-duration="4 hours">
+                                        <div><div class="name">4 Hours <span style="color:var(--secondary);font-size:0.75rem;font-weight:700;">BEST VALUE</span></div></div>
+                                        <span class="price">€1,150</span>
+                                    </label>
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="catamaran-6h" data-price="1750" data-name="Catamaran Bali 4.0" data-duration="6 hours">
+                                        <div><div class="name">6 Hours</div></div>
+                                        <span class="price">€1,750</span>
+                                    </label>
+                                    <label class="activity-option">
+                                        <input type="radio" name="activity" value="catamaran-8h" data-price="2250" data-name="Catamaran Bali 4.0" data-duration="Full day (8h)">
+                                        <div><div class="name">Full Day (8h)</div></div>
+                                        <span class="price">€2,250</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Professional Pilot Training (request-only) -->
+                            <label class="activity-option" data-cat="training" style="border-left:3px solid var(--accent-gold);">
+                                <input type="radio" name="activity" value="training-daniel" data-price="0" data-name="Training with a Professional Pilot" data-duration="Subject to confirmation" data-type="request-only">
+                                <div>
+                                    <div class="name">Training with a Professional Pilot <span style="background:var(--accent-gold);color:#000;font-size:0.7rem;padding:2px 8px;border-radius:10px;font-weight:700;">BY REQUEST</span></div>
+                                    <div class="duration">Mornings only (10:00–14:00) · Personal coaching with a professional racing pilot</div>
+                                </div>
+                                <span class="capacity"><i class="fas fa-user"></i> 1-2</span>
+                                <span class="price" style="color:var(--accent-gold);">Contact us</span>
+                            </label>
+                            <label class="activity-option" data-cat="training" style="border-left:3px solid var(--accent-gold);">
+                                <input type="radio" name="activity" value="racing-daniel" data-price="0" data-name="Racing Experience with a Professional Pilot" data-duration="Subject to confirmation" data-type="request-only">
+                                <div>
+                                    <div class="name">Racing Experience <span style="background:var(--accent-gold);color:#000;font-size:0.7rem;padding:2px 8px;border-radius:10px;font-weight:700;">BY REQUEST</span></div>
+                                    <div class="duration">Mornings only (10:00–14:00) · Timed circuit set up by Daniel to test your skills</div>
+                                </div>
+                                <span class="capacity"><i class="fas fa-user"></i> 1-2</span>
+                                <span class="price" style="color:var(--accent-gold);">Contact us</span>
+                            </label>
+                        </div>
+
+                        <!-- Request-only notice for Training/Racing -->
+                        <div id="trainingNotice" style="display:none;background:linear-gradient(135deg,#fef3c7,#fde68a);border:2px solid var(--accent-gold);border-radius:12px;padding:20px;margin-top:16px;">
+                            <h4 style="color:#92400e;margin-bottom:8px;"><i class="fas fa-info-circle"></i> Availability Request Only</h4>
+                            <p style="color:#78350f;font-size:0.9rem;margin-bottom:12px;">Training sessions with our professional pilot cannot be booked directly online. Please contact us to check availability. Sessions are only available mornings (10:00–14:00).</p>
+                            <div style="display:flex;gap:12px;flex-wrap:wrap;">
+                                <a href="https://api.whatsapp.com/send?phone=34655442232&text=Hi%20Daniel!%20I'm%20interested%20in%20a%20personal%20training%2Fracing%20session.%20Could%20you%20let%20me%20know%20your%20availability%3F" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;background:#25D366;color:white;padding:12px 20px;border-radius:50px;font-weight:600;text-decoration:none;font-size:0.9rem;"><i class="fab fa-whatsapp"></i> WhatsApp Daniel</a>
+                                <a href="tel:+34655442232" style="display:inline-flex;align-items:center;gap:8px;background:var(--primary);color:white;padding:12px 20px;border-radius:50px;font-weight:600;text-decoration:none;font-size:0.9rem;"><i class="fas fa-phone-alt"></i> +34 655 442 232</a>
+                            </div>
+                        </div>
+
+                        <div class="step-nav">
+                            <div></div>
+                            <button class="btn-next" onclick="goToStep(2)">Continue <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2: Date & Details -->
+                    <div class="step-panel" id="step2">
+                        <h3><i class="fas fa-calendar-alt"></i> Choose Date & Details</h3>
+                        
+                        <div id="sameDayMsg" class="validation-msg">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span>Same-day bookings are only available until 14:00. For last-minute bookings, contact us via <a href="https://api.whatsapp.com/send?phone=34655442232&text=Hi!%20I'd%20like%20to%20book%20for%20today" target="_blank" rel="noopener noreferrer" style="color:#92400e;font-weight:700;">WhatsApp</a> or call <a href="tel:+34655442232" style="color:#92400e;font-weight:700;">+34 655 442 232</a>.</span>
+                        </div>
+
+                        <div id="maxJetskiMsg" class="validation-msg">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span>Maximum 4 jet skis at the same time in circuit. For larger groups, please contact us.</span>
+                        </div>
+
+                        <div id="minTourMsg" class="validation-msg">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span>Excursions/tours require a minimum of 2 jet skis.</span>
+                        </div>
+
+                        <div id="minTowableMsg" class="validation-msg">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span>Towable activities (banana, sofa, donut...) require a minimum of 2 participants.</span>
+                        </div>
+
+                        <div class="field" style="margin-bottom:20px;">
+                            <label style="margin-bottom:10px;"><i class="fas fa-calendar-alt" style="color:var(--primary);margin-right:6px;"></i> Preferred Date *</label>
+                            <input type="hidden" id="bookDate" required>
+                            <div id="calendarWidget" class="calendar-container"></div>
+                            <div id="calendarSelectedBar" class="calendar-selected-bar hidden">
+                                <i class="fas fa-calendar-check"></i>
+                                <span id="calendarSelectedText"></span>
+                            </div>
+                        </div>
+
+                        <div class="field" style="margin-bottom:20px;max-width:300px;">
+                            <label for="bookTime"><i class="fas fa-clock" style="color:var(--primary);margin-right:6px;"></i> Preferred Time *</label>
+                            <select id="bookTime" required>
+                                <option value="">Select time...</option>
+                                <option value="11:00">11:00</option>
+                                <option value="11:30">11:30</option>
+                                <option value="12:00">12:00</option>
+                                <option value="12:30">12:30</option>
+                                <option value="13:00">13:00</option>
+                                <option value="13:30">13:30</option>
+                                <option value="14:00">14:00</option>
+                                <option value="14:30">14:30</option>
+                                <option value="15:00">15:00</option>
+                                <option value="15:30">15:30</option>
+                                <option value="16:00">16:00</option>
+                                <option value="16:30">16:30</option>
+                                <option value="17:00">17:00</option>
+                                <option value="17:30">17:30</option>
+                                <option value="18:00">18:00</option>
+                                <option value="18:30">18:30</option>
+                                <option value="19:00">19:00</option>
+                            </select>
+                        </div>
+
+                        <div class="guests-grid">
+                            <div class="field">
+                                <label for="bookGuests">Number of Guests *</label>
+                                <input type="number" id="bookGuests" min="1" max="12" value="1">
+                            </div>
+                            <div class="field" id="jetskiCountField">
+                                <label for="bookJetskis">Number of Jet Skis</label>
+                                <input type="number" id="bookJetskis" min="1" max="4" value="1">
+                            </div>
+                        </div>
+
+                        <div class="field" style="margin-top: 20px;">
+                            <label for="bookNotes">Special Requests (optional)</label>
+                            <textarea id="bookNotes" rows="3" placeholder="Birthday celebration, specific boat preference, accessibility needs..."></textarea>
+                        </div>
+
+                        <div class="step-nav">
+                            <button class="btn-back" onclick="goToStep(1)"><i class="fas fa-arrow-left"></i> Back</button>
+                            <button class="btn-next" onclick="goToStep(3)">Continue <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3: Your Information -->
+                    <div class="step-panel" id="step3">
+                        <h3><i class="fas fa-user"></i> Your Information</h3>
+                        
+                        <div class="form-grid">
+                            <div class="field">
+                                <label for="bookFirstName">First Name *</label>
+                                <input type="text" id="bookFirstName" required placeholder="e.g. John">
+                            </div>
+                            <div class="field">
+                                <label for="bookLastName">Last Name *</label>
+                                <input type="text" id="bookLastName" required placeholder="e.g. Smith">
+                            </div>
+                            <div class="field">
+                                <label for="bookEmail">Email Address *</label>
+                                <input type="email" id="bookEmail" required placeholder="john@example.com">
+                            </div>
+                            <div class="field">
+                                <label for="bookPhone">Phone Number *</label>
+                                <input type="tel" id="bookPhone" required placeholder="+34 XXX XXX XXX">
+                            </div>
+                            <div class="field">
+                                <label for="bookID">ID/Passport Number *</label>
+                                <input type="text" id="bookID" required placeholder="Required for contract">
+                            </div>
+                            <div class="field">
+                                <label for="bookDOB">Date of Birth *</label>
+                                <input type="date" id="bookDOB" required>
+                            </div>
+                            <div class="field full">
+                                <label for="bookAddress">Address in Spain (if applicable)</label>
+                                <input type="text" id="bookAddress" placeholder="Hotel name or address">
+                            </div>
+                        </div>
+
+                        <div class="step-nav">
+                            <button class="btn-back" onclick="goToStep(2)"><i class="fas fa-arrow-left"></i> Back</button>
+                            <button class="btn-next" onclick="goToStep(4)">Continue to Payment <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 4: Payment -->
+                    <div class="step-panel" id="step4">
+                        <h3><i class="fas fa-lock"></i> Secure Payment</h3>
+
+                        <!-- Deposit Section — Dynamic based on activity type -->
+                        <div id="depositSection">
+                            <!-- Standard deposit (non-boat activities) -->
+                            <div id="standardDeposit">
+                                <h4 style="font-size:0.95rem;margin-bottom:15px;color:var(--gray-700);">Payment Amount</h4>
+                                <div class="deposit-toggle">
+                                    <div class="deposit-option selected" onclick="selectDeposit('deposit', event)">
+                                        <div class="amount" id="depositAmount">€0</div>
+                                        <div class="label">30% Deposit — Pay rest on arrival</div>
+                                    </div>
+                                    <div class="deposit-option" onclick="selectDeposit('full', event)">
+                                        <div class="amount" id="fullAmount">€0</div>
+                                        <div class="label">Full Payment — No balance due</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Boat deposit (20% only — yacht charters) -->
+                            <div id="boatDeposit" style="display:none;">
+                                <h4 style="font-size:0.95rem;margin-bottom:15px;color:var(--gray-700);">Reservation Deposit</h4>
+                                <div class="boat-deposit-box">
+                                    <div class="boat-deposit-amount">
+                                        <span class="boat-deposit-label"><i class="fas fa-anchor" style="margin-right:8px;color:var(--primary);"></i> 20% Deposit to Secure Your Booking</span>
+                                        <span class="boat-deposit-value" id="boatDepositAmount">€0</span>
+                                    </div>
+                                    <div class="boat-deposit-info">
+                                        <i class="fas fa-info-circle"></i>
+                                        <p>A <strong>20% deposit</strong> secures your yacht reservation. The remaining balance is paid directly to the boat owner on the day of your charter.</p>
+                                    </div>
+                                    <div class="boat-balance-note">
+                                        <i class="fas fa-wallet"></i>
+                                        <span>Remaining balance: <strong id="boatBalanceAmount">€0</strong> — paid to boat owner on charter day</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4 style="font-size:0.95rem;margin-bottom:15px;color:var(--gray-700);">Payment Method</h4>
+                        <div class="payment-methods">
+                            <label class="payment-method selected">
+                                <input type="radio" name="payment" value="card" checked>
+                                <div class="method-info">
+                                    <h5>Credit / Debit Card</h5>
+                                    <p>Visa, Mastercard</p>
+                                </div>
+                                <div class="payment-icons">
+                                    <i class="fab fa-cc-visa"></i>
+                                    <i class="fab fa-cc-mastercard"></i>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="card-fields visible" id="cardFields">
+                            <div style="text-align:center; padding: 20px; background: rgba(0,180,216,0.06); border-radius: 12px; border: 1px dashed rgba(0,180,216,0.3);">
+                                <i class="fas fa-lock" style="font-size: 2rem; color: var(--primary); margin-bottom: 10px;"></i>
+                                <p style="margin:0; font-weight: 600; color: var(--dark);">Secure Payment Link</p>
+                                <p style="margin: 8px 0 0; font-size: 0.85rem; color: var(--gray-500);">After confirming your booking, you'll receive a secure payment link via WhatsApp or email to complete your payment.</p>
+                            </div>
+                        </div>
+
+                        <div class="terms-check">
+                            <input type="checkbox" id="termsAccept" required>
+                            <label for="termsAccept">
+                                I have read and accept the <a href="terms.html" target="_blank" rel="noopener noreferrer">Terms & Conditions</a>, 
+                                <a href="terms.html#privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>, and 
+                                <a href="terms.html#cancellation" target="_blank" rel="noopener noreferrer">Cancellation Policy</a>. 
+                                I confirm I am at least 18 years old (or 16 with parental consent for jet ski activities). 
+                                I accept the <a href="https://marbellajetski.com/contratos/rules-and-regulation/" target="_blank" rel="noopener noreferrer">Rules & Regulations</a> and <a href="weather-policy.html" target="_blank" rel="noopener noreferrer">Weather Cancellation Protocol</a> of Marbella JetSki.
+                            </label>
+                        </div>
+
+                        <div class="terms-check" style="background: rgba(0,180,216,0.05);">
+                            <input type="checkbox" id="mediaConsent">
+                            <label for="mediaConsent">
+                                I authorize Marbella JetSki to capture and publish photographic and audiovisual material of my experience for promotional purposes (optional).
+                            </label>
+                        </div>
+
+                        <div class="step-nav">
+                            <button class="btn-back" onclick="goToStep(3)"><i class="fas fa-arrow-left"></i> Back</button>
+                            <button class="btn-next" onclick="submitBooking()" style="background: linear-gradient(135deg, #10b981, #059669);">
+                                <i class="fas fa-lock"></i> Confirm & Pay <span id="payButtonAmount"></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 5: Confirmation -->
+                    <div class="step-panel" id="step5">
+                        <div class="confirmation">
+                            <div class="confirmation-icon"><i class="fas fa-check"></i></div>
+                            <h3>Booking Confirmed!</h3>
+                            <p>Thank you! We've received your booking request. You'll receive a confirmation via WhatsApp and email shortly.</p>
+                            <div class="booking-ref">
+                                <div class="ref-label">Booking Reference</div>
+                                <div class="ref-number" id="bookingRef">MJS-2026-XXXXX</div>
+                            </div>
+                            <p style="font-size:0.85rem;">Questions? Contact us on <a href="https://api.whatsapp.com/send?phone=34655442232" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600;">WhatsApp</a> or call <a href="tel:+34655442232" style="color:var(--primary);font-weight:600;">+34 655 442 232</a></p>
+                            <div style="margin-top:30px;">
+                                <a href="index.html" class="btn-next" style="display:inline-block;text-decoration:none;">
+                                    <i class="fas fa-home"></i> Back to Home
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Summary Sidebar -->
+                <div class="order-summary" id="orderSummary">
+                    <h4><i class="fas fa-receipt"></i> Booking Summary</h4>
+                    
+                    <div class="summary-row">
+                        <span class="label">Activity</span>
+                        <span class="value" id="sumActivity">—</span>
+                    </div>
+                    <div class="summary-row">
+                        <span class="label">Duration</span>
+                        <span class="value" id="sumDuration">—</span>
+                    </div>
+                    <div class="summary-row">
+                        <span class="label">Date</span>
+                        <span class="value" id="sumDate">—</span>
+                    </div>
+                    <div class="summary-row">
+                        <span class="label">Time</span>
+                        <span class="value" id="sumTime">—</span>
+                    </div>
+                    <div class="summary-row">
+                        <span class="label">Guests</span>
+                        <span class="value" id="sumGuests">—</span>
+                    </div>
+                    
+                    <div class="summary-divider"></div>
+                    
+                    <div class="summary-row">
+                        <span class="label">Unit Price</span>
+                        <span class="value" id="sumUnitPrice">—</span>
+                    </div>
+                    <div class="summary-row" id="sumQtyRow" style="display:none;">
+                        <span class="label">Quantity</span>
+                        <span class="value" id="sumQty">—</span>
+                    </div>
+                    
+                    <div class="summary-divider"></div>
+                    
+                    <div class="summary-total">
+                        <span>Total</span>
+                        <span class="total-price" id="sumTotal">€0</span>
+                    </div>
+                    <div class="summary-row" id="sumDepositRow" style="display:none;">
+                        <span class="label" id="sumDepositLabel">Deposit Due Now</span>
+                        <span class="value" id="sumDeposit" style="color:#10b981;font-weight:700;">—</span>
+                    </div>
+                    <div class="summary-row" id="sumBalanceRow" style="display:none;">
+                        <span class="label">Balance (to boat owner)</span>
+                        <span class="value" id="sumBalance">—</span>
+                    </div>
+                    <p style="text-align:center;font-size:0.78rem;color:var(--text-secondary);margin-top:6px;"><i class="fas fa-receipt" style="margin-right:4px;color:var(--primary);opacity:0.7;"></i>All prices include VAT (IVA)</p>
+
+                    <div class="summary-badges">
+                        <div class="summary-badge"><i class="fas fa-check-circle"></i> Free cancellation (24h notice)</div>
+                        <div class="summary-badge"><i class="fas fa-check-circle"></i> Full weather refund guarantee</div>
+                        <div class="summary-badge"><i class="fas fa-check-circle"></i> Safety equipment included</div>
+                        <div class="summary-badge"><i class="fas fa-check-circle"></i> Civil liability insurance</div>
+                    </div>
+
+                    <a href="https://api.whatsapp.com/send?phone=34655442232&text=Hi!%20I%27d%20like%20to%20book%20a%20water%20sports%20experience!" target="_blank" rel="noopener noreferrer" class="summary-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Or book via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Policies Bar -->
+    <section class="policies-bar">
+        <div class="container">
+            <div class="policies-grid">
+                <div class="policy-item">
+                    <i class="fas fa-undo"></i>
+                    <h5>Free Cancellation</h5>
+                    <p>Cancel 24h before for a full refund</p>
+                </div>
+                <div class="policy-item">
+                    <i class="fas fa-cloud-sun-rain"></i>
+                    <h5>Weather Guarantee</h5>
+                    <p>100% refund if cancelled due to weather</p>
+                </div>
+                <div class="policy-item">
+                    <i class="fas fa-lock"></i>
+                    <h5>Secure Payment</h5>
+                    <p>256-bit SSL encrypted transactions</p>
+                </div>
+                <div class="policy-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h5>Fully Insured</h5>
+                    <p>Civil liability insurance on all activities</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#03045e" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+        <div class="footer-content">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="index.html" class="footer-logo">
+                            <img src="assets/media/photos/logo-circular.png" alt="Marbella JetSki Logo" style="height: 60px; margin-bottom: 15px;">
+                            <span class="logo-text">MARBELLA<span class="logo-highlight">JETSKI</span></span>
+                        </a>
+                        <p>Costa del Sol's premier water sports destination. Family-owned since 1998, led by 4x Spanish National Champion Daniel Stiers.</p>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html#services">Services</a></li>
+                            <li><a href="index.html#jetski">Jet Ski Hire</a></li>
+                            <li><a href="index.html#watersports">Water Sports</a></li>
+                            <li><a href="index.html#boats">Yacht Charters</a></li>
+                            <li><a href="index.html#racing-lessons">Racing Lessons</a></li>
+                            <li><a href="about-us.html">About Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="terms.html#legal-notice">Legal Notice</a></li>
+                            <li><a href="terms.html#terms">Terms & Conditions</a></li>
+                            <li><a href="terms.html#privacy">Privacy Policy</a></li>
+                            <li><a href="terms.html#cancellation">Cancellation Policy</a></li>
+                            <li><a href="weather-policy.html">Weather Protocol</a></li>
+                            <li><a href="terms.html#cookies">Cookie Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact">
+                        <h4>Contact</h4>
+                        <div class="footer-contact-item"><i class="fas fa-phone-alt"></i> <a href="tel:+34655442232">+34 655 442 232</a></div>
+                        <div class="footer-contact-item"><i class="fab fa-whatsapp"></i> <a href="https://api.whatsapp.com/send?phone=34655442232" target="_blank" rel="noopener noreferrer">WhatsApp</a></div>
+                        <div class="footer-contact-item"><i class="fas fa-envelope"></i> <a href="mailto:jetskimarbella@gmail.com">jetskimarbella@gmail.com</a></div>
+                        <div class="footer-contact-item"><i class="fas fa-clock"></i> <span>Daily: 11am - 8pm</span></div>
+                        
+                        <div class="footer-social">
+                            <a href="https://www.facebook.com/jetskimarbella/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/jetskimarbella/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.tripadvisor.es/Attraction_Review-g187439-d6949698-Reviews-Marbella_Jet_Ski-Marbella_Costa_del_Sol_Province_of_Malaga_Andalucia.html" target="_blank" rel="noopener noreferrer" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 STIERS E HIJOS S.L. (Marbella JetSki). All rights reserved. NIF: B92917178</p>
+                    <p class="credit">Designed with 💙 for Summer 2026</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    /* ========== Booking System Logic ========== */
+    let currentStep = 1;
+    let selectedActivity = null;
+    let totalPrice = 0;
+    let depositType = 'deposit'; // 'deposit', 'full', or 'boat-deposit'
+    const LANG = 'en';
+    const MAX_CIRCUIT_JETSKIS = 4;
+    const MIN_TOUR_JETSKIS = 2;
+    const MIN_TOWABLE_GUESTS = 2;
+    const SAME_DAY_CUTOFF_HOUR = 14;
+    const BOAT_DEPOSIT_RATE = 0.20;
+    const STANDARD_DEPOSIT_RATE = 0.30;
+
+    // Calendar state
+    let calendarMonth = new Date().getMonth();
+    let calendarYear = new Date().getFullYear();
+    let calendarSelectedDate = null;
+
+    function isBoatBooking() {
+        const radio = document.querySelector('input[name="activity"]:checked');
+        if (!radio) return false;
+        return radio.value.startsWith('azimut') || radio.value.startsWith('cranchi') || radio.value.startsWith('rinker') || radio.value.startsWith('catamaran');
+    }
+
+    /* ========== Calendar Widget ========== */
+    function renderCalendar() {
+        const widget = document.getElementById('calendarWidget');
+        if (!widget) return;
+        const today = new Date(); today.setHours(0,0,0,0);
+        const todayStr = fmtISO(today);
+        const first = new Date(calendarYear, calendarMonth, 1);
+        const last = new Date(calendarYear, calendarMonth + 1, 0);
+        const startWd = (first.getDay() + 6) % 7; // Mon=0
+        const mNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+        const dNames = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+        const canPrev = calendarYear > today.getFullYear() || (calendarYear === today.getFullYear() && calendarMonth > today.getMonth());
+        let h = '<div class="calendar-header">' +
+            '<button type="button" class="calendar-nav" onclick="calNav(-1)"' + (canPrev ? '' : ' disabled') + '><i class="fas fa-chevron-left"></i></button>' +
+            '<h5>' + mNames[calendarMonth] + ' ' + calendarYear + '</h5>' +
+            '<button type="button" class="calendar-nav" onclick="calNav(1)"><i class="fas fa-chevron-right"></i></button></div>';
+        h += '<div class="calendar-grid">';
+        dNames.forEach(d => { h += '<div class="calendar-day-header">' + d + '</div>'; });
+        for (let i = 0; i < startWd; i++) h += '<div class="calendar-day empty"></div>';
+        for (let day = 1; day <= last.getDate(); day++) {
+            const dt = new Date(calendarYear, calendarMonth, day);
+            const ds = fmtISO(dt);
+            const past = dt < today;
+            let cl = 'calendar-day';
+            if (past) cl += ' disabled';
+            if (ds === todayStr) cl += ' today';
+            if (calendarSelectedDate === ds) cl += ' selected';
+            h += '<div class="' + cl + '"' + (past ? '' : ' onclick="calSelect(\'' + ds + '\')"') + '>' + day + '</div>';
+        }
+        h += '</div>';
+        widget.innerHTML = h;
+    }
+    function fmtISO(d) { return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0'); }
+    function calNav(delta) {
+        calendarMonth += delta;
+        if (calendarMonth > 11) { calendarMonth = 0; calendarYear++; }
+        if (calendarMonth < 0) { calendarMonth = 11; calendarYear--; }
+        renderCalendar();
+    }
+    function calSelect(ds) {
+        calendarSelectedDate = ds;
+        document.getElementById('bookDate').value = ds;
+        const bar = document.getElementById('calendarSelectedBar');
+        const txt = document.getElementById('calendarSelectedText');
+        if (bar && txt) {
+            const d = new Date(ds + 'T12:00');
+            txt.textContent = d.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+            bar.classList.remove('hidden');
+        }
+        renderCalendar();
+        checkSameDayCutoff();
+        updateSummary();
+    }
+
+    /* ========== Boat Payment Rules ========== */
+    function applyBoatPaymentRules() {
+        const isBoat = isBoatBooking();
+        const std = document.getElementById('standardDeposit');
+        const boat = document.getElementById('boatDeposit');
+        if (std && boat) {
+            if (isBoat) {
+                std.style.display = 'none';
+                boat.style.display = 'block';
+                depositType = 'boat-deposit';
+            } else {
+                std.style.display = 'block';
+                boat.style.display = 'none';
+                if (depositType === 'boat-deposit') depositType = 'deposit';
+            }
+        }
+        updateSummary();
+    }
+
+    /* ========== Init ========== */
+    document.addEventListener('DOMContentLoaded', function() {
+        renderCalendar();
+
+        document.querySelectorAll('.cat-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                const cat = this.dataset.cat;
+                document.querySelectorAll('.activity-option[data-cat]').forEach(opt => {
+                    opt.style.display = (cat === 'all' || opt.dataset.cat === cat) ? '' : 'none';
+                });
+                document.querySelectorAll('.yacht-accordion[data-cat]').forEach(acc => {
+                    acc.style.display = (cat === 'all' || acc.dataset.cat === cat) ? '' : 'none';
+                    if (cat !== 'all' && acc.dataset.cat !== cat) acc.classList.remove('open');
+                });
+                // Reset selection and hide training notice when switching tabs
+                document.querySelectorAll('.activity-option').forEach(o => o.classList.remove('selected'));
+                document.querySelectorAll('input[name="activity"]').forEach(r => r.checked = false);
+                const notice = document.getElementById('trainingNotice');
+                if (notice) notice.style.display = 'none';
+                const stepNav = document.querySelector('.step-nav');
+                if (stepNav) stepNav.style.display = '';
+            });
+        });
+
+        // Auto-filter to yacht and open specific accordion if ?yacht= param present
+        const urlParams = new URLSearchParams(window.location.search);
+        const yachtParam = urlParams.get('yacht');
+        const activityParam = urlParams.get('activity');
+        
+        if (activityParam) {
+            // Auto-select the matching activity radio button
+            setTimeout(() => {
+                const radio = document.querySelector('input[name="activity"][value="' + activityParam + '"]');
+                if (radio) {
+                    // First click the correct category tab
+                    const label = radio.closest('.activity-option');
+                    if (label) {
+                        const cat = label.getAttribute('data-cat');
+                        if (cat) {
+                            const tab = document.querySelector('.cat-tab[data-cat="' + cat + '"]');
+                            if (tab) tab.click();
+                        }
+                    }
+                    // Then select the radio
+                    setTimeout(() => {
+                        radio.checked = true;
+                        radio.dispatchEvent(new Event('change', { bubbles: true }));
+                        // Scroll to booking form
+                        const bookingForm = document.querySelector('.booking-form, .step-content, #activityList');
+                        if (bookingForm) bookingForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 150);
+                }
+            }, 100);
+        } else if (yachtParam) {
+            // Click the Yacht Charters tab
+            const yachtTab = document.querySelector('.cat-tab[data-cat="yacht"]');
+            if (yachtTab) yachtTab.click();
+            // Open the matching accordion
+            setTimeout(() => {
+                const allAccordions = document.querySelectorAll('.yacht-accordion[data-cat="yacht"]');
+                allAccordions.forEach(acc => {
+                    const firstInput = acc.querySelector('input[name="activity"]');
+                    if (firstInput && firstInput.value.startsWith(yachtParam + '-')) {
+                        acc.classList.add('open');
+                        acc.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                });
+            }, 100);
+        }
+
+        document.querySelectorAll('input[name="activity"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                document.querySelectorAll('.activity-option').forEach(o => o.classList.remove('selected'));
+                this.closest('.activity-option').classList.add('selected');
+                const notice = document.getElementById('trainingNotice');
+                const stepNav = this.closest('.step-content, .step-panel').querySelector('.step-nav');
+                if (this.dataset.type === 'request-only') {
+                    if (notice) notice.style.display = 'block';
+                    if (stepNav) stepNav.style.display = 'none';
+                } else {
+                    if (notice) notice.style.display = 'none';
+                    if (stepNav) stepNav.style.display = '';
+                }
+                applyActivityConstraints();
+                updateSummary();
+            });
+        });
+
+        ['bookGuests', 'bookJetskis'].forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.addEventListener('change', function() { validateConstraints(); updateSummary(); });
+        });
+
+        const timeEl = document.getElementById('bookTime');
+        if (timeEl) timeEl.addEventListener('change', updateSummary);
+
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+        if (navToggle && navMenu) {
+            navToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                navToggle.classList.toggle('active');
+            });
+        }
+    });
+
+    function getActivityType() {
+        const radio = document.querySelector('input[name="activity"]:checked');
+        if (!radio) return null;
+        return radio.dataset.type || (radio.value.startsWith('jetski') ? 'circuit' : null);
+    }
+
+    function applyActivityConstraints() {
+        const radio = document.querySelector('input[name="activity"]:checked');
+        if (!radio) return;
+        const type = radio.dataset.type || '';
+        const jsField = document.getElementById('jetskiCountField');
+        const jsInput = document.getElementById('bookJetskis');
+        const guestsInput = document.getElementById('bookGuests');
+        if (jsField) jsField.style.display = radio.value.startsWith('jetski') ? '' : 'none';
+        if (type === 'circuit' && jsInput) { jsInput.max = MAX_CIRCUIT_JETSKIS; if (parseInt(jsInput.value) > MAX_CIRCUIT_JETSKIS) jsInput.value = MAX_CIRCUIT_JETSKIS; }
+        if (type === 'tour' && jsInput) { jsInput.min = MIN_TOUR_JETSKIS; if (parseInt(jsInput.value) < MIN_TOUR_JETSKIS) jsInput.value = MIN_TOUR_JETSKIS; } else if (jsInput) { jsInput.min = 1; }
+        if (type === 'sup' && guestsInput) { guestsInput.value = 1; guestsInput.max = 1; guestsInput.disabled = true; } else if (guestsInput) { guestsInput.max = 12; guestsInput.disabled = false; }
+        if (type === 'towable' && guestsInput) { guestsInput.min = MIN_TOWABLE_GUESTS; if (parseInt(guestsInput.value) < MIN_TOWABLE_GUESTS) guestsInput.value = MIN_TOWABLE_GUESTS; } else if (guestsInput && type !== 'sup') { guestsInput.min = 1; }
+        hideAllValidationMsgs();
+    }
+
+    function validateConstraints() {
+        const radio = document.querySelector('input[name="activity"]:checked');
+        if (!radio) return true;
+        const type = radio.dataset.type || '';
+        const jsInput = document.getElementById('bookJetskis');
+        const guestsInput = document.getElementById('bookGuests');
+        let valid = true;
+        hideAllValidationMsgs();
+        if (type === 'circuit' && jsInput && parseInt(jsInput.value) > MAX_CIRCUIT_JETSKIS) { showMsg('maxJetskiMsg'); jsInput.value = MAX_CIRCUIT_JETSKIS; valid = false; }
+        if (type === 'tour' && jsInput && parseInt(jsInput.value) < MIN_TOUR_JETSKIS) { showMsg('minTourMsg'); valid = false; }
+        if (type === 'towable' && guestsInput && parseInt(guestsInput.value) < MIN_TOWABLE_GUESTS) { showMsg('minTowableMsg'); valid = false; }
+        return valid;
+    }
+
+    function checkSameDayCutoff() {
+        const dateInput = document.getElementById('bookDate');
+        const msg = document.getElementById('sameDayMsg');
+        const timeSelect = document.getElementById('bookTime');
+        if (!dateInput || !msg) return true;
+        const today = new Date().toISOString().split('T')[0];
+        const now = new Date();
+        if (dateInput.value === today && now.getHours() >= SAME_DAY_CUTOFF_HOUR) {
+            showMsg('sameDayMsg');
+            if (timeSelect) { Array.from(timeSelect.options).forEach(opt => { if (opt.value) opt.disabled = true; }); timeSelect.value = ''; }
+            return false;
+        } else {
+            hideMsg('sameDayMsg');
+            if (timeSelect) Array.from(timeSelect.options).forEach(opt => opt.disabled = false);
+            return true;
+        }
+    }
+
+    function showMsg(id) { const el = document.getElementById(id); if (el) el.classList.add('visible'); }
+    function hideMsg(id) { const el = document.getElementById(id); if (el) el.classList.remove('visible'); }
+    function hideAllValidationMsgs() { ['sameDayMsg', 'maxJetskiMsg', 'minTourMsg', 'minTowableMsg'].forEach(id => hideMsg(id)); }
+
+    function goToStep(step) {
+        if (step > currentStep) {
+            if (currentStep === 1) { if (!document.querySelector('input[name="activity"]:checked')) { alert('Please select an activity to continue.'); return; } }
+            if (currentStep === 2) { if (!document.getElementById('bookDate').value || !document.getElementById('bookTime').value) { alert('Please select a date and time.'); return; } }
+            if (currentStep === 3) {
+                const f = ['bookFirstName','bookLastName','bookEmail','bookPhone','bookID','bookDOB'];
+                if (f.some(id => !document.getElementById(id).value)) { alert('Please fill in all required fields.'); return; }
+            }
+        }
+        currentStep = step;
+        document.querySelectorAll('.step').forEach((s, i) => { s.classList.remove('active', 'completed'); if (i+1 === step) s.classList.add('active'); if (i+1 < step) s.classList.add('completed'); });
+        document.querySelectorAll('.step-panel').forEach(p => p.classList.remove('active'));
+        const panel = document.getElementById('step' + step);
+        if (panel) panel.classList.add('active');
+        if (step === 2) { const a = document.querySelector('input[name="activity"]:checked'); const f = document.getElementById('jetskiCountField'); if (a && f) f.style.display = a.value.startsWith('jetski') ? '' : 'none'; }
+        if (step === 4) applyBoatPaymentRules();
+        updateSummary();
+        window.scrollTo({ top: 200, behavior: 'smooth' });
+    }
+
+    function updateSummary() {
+        const radio = document.querySelector('input[name="activity"]:checked');
+        if (!radio) return;
+        const name = radio.dataset.name, duration = radio.dataset.duration, price = parseFloat(radio.dataset.price);
+        const perPerson = radio.dataset.per === 'person';
+        const guests = parseInt(document.getElementById('bookGuests').value) || 1;
+        const jetskis = parseInt(document.getElementById('bookJetskis')?.value) || 1;
+        const date = document.getElementById('bookDate').value;
+        const time = document.getElementById('bookTime').value;
+        let qty = 1;
+        if (perPerson) qty = guests; else if (radio.value.startsWith('jetski')) qty = jetskis;
+        totalPrice = price * qty;
+
+        document.getElementById('sumActivity').textContent = name;
+        document.getElementById('sumDuration').textContent = duration;
+        document.getElementById('sumDate').textContent = date ? new Date(date + 'T12:00').toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : '—';
+        document.getElementById('sumTime').textContent = time || '—';
+        document.getElementById('sumGuests').textContent = guests;
+        document.getElementById('sumUnitPrice').textContent = '€' + price;
+        if (qty > 1) { document.getElementById('sumQtyRow').style.display = ''; document.getElementById('sumQty').textContent = qty + (perPerson ? ' persons' : ' jet skis'); }
+        else { document.getElementById('sumQtyRow').style.display = 'none'; }
+        document.getElementById('sumTotal').textContent = '€' + totalPrice.toLocaleString();
+
+        // Deposit calculations — boat (20%) vs standard (30%)
+        const isBoat = isBoatBooking();
+        const rate = isBoat ? BOAT_DEPOSIT_RATE : STANDARD_DEPOSIT_RATE;
+        const dep = Math.ceil(totalPrice * rate);
+        const bal = totalPrice - dep;
+
+        // Standard deposit UI
+        const depEl = document.getElementById('depositAmount'); if (depEl) depEl.textContent = '€' + Math.ceil(totalPrice * STANDARD_DEPOSIT_RATE);
+        const fullEl = document.getElementById('fullAmount'); if (fullEl) fullEl.textContent = '€' + totalPrice.toLocaleString();
+        // Boat deposit UI
+        const boatDepEl = document.getElementById('boatDepositAmount'); if (boatDepEl) boatDepEl.textContent = '€' + dep;
+        const boatBalEl = document.getElementById('boatBalanceAmount'); if (boatBalEl) boatBalEl.textContent = '€' + bal.toLocaleString();
+
+        // Summary deposit/balance rows
+        const sumDepRow = document.getElementById('sumDepositRow');
+        const sumBalRow = document.getElementById('sumBalanceRow');
+        const sumDepEl = document.getElementById('sumDeposit');
+        const sumBalEl = document.getElementById('sumBalance');
+        const sumDepLabel = document.getElementById('sumDepositLabel');
+        if (isBoat && totalPrice > 0) {
+            if (sumDepRow) { sumDepRow.style.display = ''; sumDepLabel.textContent = 'Deposit Due Now (20%)'; }
+            if (sumDepEl) sumDepEl.textContent = '€' + dep;
+            if (sumBalRow) sumBalRow.style.display = '';
+            if (sumBalEl) sumBalEl.textContent = '€' + bal.toLocaleString();
+        } else if (totalPrice > 0 && depositType === 'deposit') {
+            if (sumDepRow) { sumDepRow.style.display = ''; sumDepLabel.textContent = 'Deposit Due Now (30%)'; }
+            if (sumDepEl) sumDepEl.textContent = '€' + Math.ceil(totalPrice * STANDARD_DEPOSIT_RATE);
+            if (sumBalRow) sumBalRow.style.display = 'none';
+        } else {
+            if (sumDepRow) sumDepRow.style.display = 'none';
+            if (sumBalRow) sumBalRow.style.display = 'none';
+        }
+
+        // Pay button
+        let payAmt;
+        if (isBoat) payAmt = dep;
+        else payAmt = depositType === 'full' ? totalPrice : Math.ceil(totalPrice * STANDARD_DEPOSIT_RATE);
+        const payBtn = document.getElementById('payButtonAmount');
+        if (payBtn) payBtn.textContent = ' €' + payAmt;
+    }
+
+    function selectDeposit(type, ev) {
+        if (isBoatBooking()) { depositType = 'boat-deposit'; return; } // enforce 20% only for boats
+        depositType = type;
+        document.querySelectorAll('.deposit-option').forEach(o => o.classList.remove('selected'));
+        if (ev) ev.currentTarget.classList.add('selected');
+        updateSummary();
+    }
+
+    function submitBooking() {
+        if (!document.getElementById('termsAccept').checked) { alert('Please accept the Terms & Conditions to continue.'); return; }
+        const ref = 'MJS-' + new Date().getFullYear() + '-' + Math.random().toString(36).substr(2, 5).toUpperCase();
+        document.getElementById('bookingRef').textContent = ref;
+
+        const activityEl = document.querySelector('input[name="activity"]:checked');
+        const activityName = activityEl ? activityEl.dataset.name : '';
+        const activityDuration = activityEl ? activityEl.dataset.duration : '';
+        const date = document.getElementById('bookDate').value;
+        const time = document.getElementById('bookTime').value;
+        const guests = document.getElementById('bookGuests').value;
+        const firstName = document.getElementById('bookFirstName').value;
+        const lastName = document.getElementById('bookLastName').value;
+        const email = document.getElementById('bookEmail').value;
+        const phone = document.getElementById('bookPhone').value;
+
+        const isBoat = isBoatBooking();
+        const rate = isBoat ? BOAT_DEPOSIT_RATE : STANDARD_DEPOSIT_RATE;
+        const payAmount = (isBoat || depositType !== 'full') ? Math.ceil(totalPrice * rate) : totalPrice;
+        const payType = isBoat ? 'Card (20% boat deposit)' : 'Card (' + depositType + ')';
+
+        const msg = '🚤 NEW BOOKING REQUEST\n' +
+            'Ref: ' + ref + '\n\n' +
+            'Activity: ' + activityName + ' (' + activityDuration + ')\n' +
+            'Date: ' + date + '\nTime: ' + time + '\nGuests: ' + guests + '\n\n' +
+            'Name: ' + firstName + ' ' + lastName + '\n' +
+            'Email: ' + email + '\nPhone: ' + phone + '\n\n' +
+            'Payment: ' + payType + '\n' +
+            'Amount: €' + payAmount + ' of €' + totalPrice + ' total' +
+            (isBoat ? '\nBalance: €' + (totalPrice - payAmount) + ' (to boat owner)' : '') +
+            '\n\nSent from marbellajetski.com booking system';
+
+        currentStep = 5;
+        document.querySelectorAll('.step').forEach(s => s.classList.add('completed'));
+        document.querySelectorAll('.step-panel').forEach(p => p.classList.remove('active'));
+        document.getElementById('step5').classList.add('active');
+        document.getElementById('orderSummary').style.display = 'none';
+        window.scrollTo({ top: 200, behavior: 'smooth' });
+        setTimeout(() => { window.open('https://api.whatsapp.com/send?phone=34655442232&text=' + encodeURIComponent(msg), '_blank'); }, 1500);
+    }
+    </script>
+</body>

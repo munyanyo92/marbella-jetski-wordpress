@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <clipPath id="circle-clip">
+      <circle cx="256" cy="256" r="228"/>
+    </clipPath>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Playfair+Display:wght@400&amp;display=swap');
+    </style>
+  </defs>
+  
+  <!-- Navy circle background -->
+  <circle cx="256" cy="256" r="228" fill="#0d1b39"/>
+  
+  <!-- Jetski silhouette -->
+  <g clip-path="url(#circle-clip)">
+    <!-- Simplified jetski hull -->
+    <path d="M 160 175 L 155 168 C 155 162 165 155 180 152 L 345 148 C 360 148 365 155 358 165 L 345 175 C 335 182 315 185 295 182 L 180 182 C 168 182 160 180 160 175 Z" fill="white"/>
+    
+    <!-- Rider body -->
+    <path d="M 235 152 L 228 130 C 226 122 230 110 238 100 L 250 88 C 254 84 258 82 256 80 C 254 78 248 82 244 88 L 228 108 C 222 116 218 125 220 135 L 215 152 Z" fill="white"/>
+    
+    <!-- Rider head -->
+    <circle cx="247" cy="75" r="12" fill="white"/>
+    
+    <!-- Water spray -->
+    <path d="M 160 170 L 120 155 M 160 172 L 115 165 M 158 175 L 110 175 M 158 178 L 120 188 M 160 180 L 130 195" 
+          stroke="white" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" fill="none"/>
+    
+    <!-- Waves -->
+    <path d="M 136 195 Q 176 185, 216 195 Q 256 205, 296 195 Q 336 185, 376 195" stroke="white" stroke-opacity="0.7" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M 166 210 Q 206 200, 246 210 Q 286 220, 326 210" stroke="white" stroke-opacity="0.5" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M 196 222 Q 226 215, 256 222 Q 286 229, 316 222" stroke="white" stroke-opacity="0.35" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    
+    <!-- Separator -->
+    <line x1="176" y1="248" x2="336" y2="248" stroke="white" stroke-opacity="0.3" stroke-width="0.8"/>
+        <circle cx="176" cy="248" r="2" fill="white" fill-opacity="0.5"/>
+        <circle cx="336" cy="248" r="2" fill="white" fill-opacity="0.5"/>
+    
+    <!-- Text: MARBELLA -->
+    <text x="256" y="305.8" 
+          font-family="'Playfair Display', sans-serif" 
+          font-weight="700"
+          font-size="48" 
+          fill="white" text-anchor="middle" 
+          letter-spacing="3">M A R B E L L A</text>
+    
+    <!-- Text: JET SKI -->
+    <text x="256" y="347.8" 
+          font-family="'Playfair Display', sans-serif" 
+          font-weight="400"
+          font-size="32" 
+          fill="white" text-anchor="middle" 
+          letter-spacing="4">JET SKI</text>
+    
+    <!-- Text: RENTAL -->
+    <text x="256" y="373.8" 
+          font-family="'Playfair Display', sans-serif" 
+          font-weight="400"
+          font-size="14" 
+          fill="white" fill-opacity="0.7" text-anchor="middle" 
+          letter-spacing="8">RENTAL</text>
+  </g>
+</svg>
